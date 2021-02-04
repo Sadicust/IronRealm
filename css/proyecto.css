@@ -55,7 +55,18 @@ header{
 }
 .ico{
     width: 20px;
+    height: 20px;
     filter: invert(1);
+    background-repeat: no-repeat;
+}
+.yt{
+    background-image: url("imagen/youtube.svg");
+}
+.tw{
+    background-image: url("imagen/twitter.svg");
+}
+.ins{
+    background-image: url("imagen/instagram.svg");
 }
 .about{
     width: 60%;
@@ -269,6 +280,9 @@ main{
 }
 .itunes{
     width: 25px;
+    height: 25px;
+    background-image: url("imagen/itunes.svg");
+    background-repeat: no-repeat;
     filter: invert(1);
 }
 footer{
@@ -303,6 +317,7 @@ footer{
     }
     .ico{
         width: 25px;
+        height: 25px;
     }
     .about{
         font-size: 1.2em;
@@ -364,6 +379,7 @@ footer{
     }
     .itunes{
         width: 40px;
+        height: 40px;
     }
     footer{
         font-size: 17px;
