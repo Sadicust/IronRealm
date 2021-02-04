@@ -1,0 +1,404 @@
+*{
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Corbel';
+    color: white;
+    text-decoration: none;
+    user-select: none;
+    outline: none;
+}
+
+body{
+    background-color: #27262a;
+}
+header{
+    background-color: #37363b7e;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    transition: .2s;
+}
+.head_logo_social{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    background-image: url("imagen/logo.svg");
+    background-repeat: no-repeat;
+
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+
+    transition: .2s;
+}
+.social{
+    background-color: #55535a50;
+    border-bottom: 1px solid #B0AEB790;
+    backdrop-filter: blur(5px);
+    border-radius: 0px 0px 50px 50px;
+
+    width: 150px;
+    height: 40px;
+    margin-right: 10px;
+    padding: 0px 20px 0px 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+
+    transition: .2s;
+}
+.ico{
+    width: 20px;
+    filter: invert(1);
+}
+.about{
+    width: 60%;
+    max-width: 600px;
+    text-align: center;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 45px;
+    /* overflow: hidden; */
+
+    transition: .2s;
+}
+.header_vid{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    transition: .2s;
+}
+.vid_cont{
+    position: relative;
+    filter: blur(.5em);
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 330px;
+
+    margin-bottom: 70px;
+
+    transition: .2s;
+}
+aside >h1{
+    font-size: 17px;
+
+    margin-bottom: 10px;
+
+    transition: .2s;
+}
+.av{
+    background-image: url("imagen/ink.jpg");
+    background-position: center;
+    background-size: 110%;
+    box-shadow: inset 0px 0px 50px #55535a90;
+    border-radius: 10px;
+
+    width: 80%;
+    max-width: 640px;
+    height: 200px;
+
+    transition: .2s;
+}
+.av:hover{
+    filter: drop-shadow(0 0 15px #66646d50);
+}
+main{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 100px;
+
+    transition: .2s;
+}
+.btn{
+    background-color: #626068;
+    width: 300px;
+    height: 30px;
+
+    margin-bottom: 40px;
+}
+.cnt{
+    width: 95%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    gap: 50px;
+}
+.b{
+    background-color: #37363b;
+    border-radius: 50px 150px 150px 50px;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+}
+.b:hover{
+    background: linear-gradient(90deg, #66646d 0%,#37363b 80%);
+}
+.cara,.kraken,.coloso,.dorado{
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+}
+.cara{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 8%;
+    overflow-x: visible;
+}
+.kraken,.coloso,.dorado{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	background-repeat: no-repeat;
+    border-radius: 2px;
+    box-shadow: 5px 10px 15px #1f1e20;
+    filter: grayscale(.7);
+    transition: .2s;
+}
+.kraken:hover,.coloso:hover,.dorado:hover{
+    cursor: pointer;
+}
+.color{
+    filter: grayscale(0);
+}
+.kraken{
+    background-image: url("imagen/kraken.jpg");
+}
+.coloso{
+    background-image: url("imagen/coloso.jpg");
+}
+.dorado{
+    background-image: url("imagen/dorado.jpg");
+}
+.vinyl_kraken,.vinyl_coloso,.vinyl_dorado,.vinyl_kraken_light,.vinyl_coloso_light,.vinyl_dorado_light{
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    transition: .2s;
+}
+.animacion_disco{
+    opacity: 1;
+	left: 55px;
+	animation: giro 2s;
+}
+.animacion_luz{
+    opacity: 1;
+    left: 55px;
+}
+@keyframes giro {
+    0% {transform: rotate(-135deg)} 
+    100% {transform: rotate(360deg)} 
+}
+
+.lista_kraken,.lista_coloso,.lista_dorado{
+    position: relative;
+    right: -50px;
+    margin-right: 15%;
+    font-size: .8em;
+    opacity: 0;
+    pointer-events: none;
+    transition: .2s;
+}
+.lista_activa{
+    pointer-events: all;
+    right: 0px;
+    opacity: 1;
+}
+.lista_enlace{
+    font-size: 45px;
+    font-weight: bold;
+}
+.lista_kraken>h5,.lista_coloso>h5,.lista_dorado>h5{
+    margin-left: 10px;
+}
+.comprar_kraken,.comprar_coloso,.comprar_dorado{
+    background-color: #626068;
+    opacity: 0;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: -50px;
+    border-radius: 150px;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+.comprar_activo{
+    opacity: 1;
+    right: 20px;
+    transition: .2s;
+}
+.comprar_kraken:hover,.comprar_coloso:hover,.comprar_dorado:hover{
+    background-color: #e76464;
+    filter: drop-shadow(0 0 10px #e76464);
+}
+.itunes{
+    width: 25px;
+    filter: invert(1);
+}
+footer{
+    background-color: #37363b;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+
+    width: 100%;
+    height: 35px;
+
+    transition: .2s;
+}
+
+@media screen and (min-width: 600px){
+    header{
+        width: 100%;
+        height: 550px;
+    }
+    .header_vid{
+        height: 550px;
+    }
+    .logo{
+        width: 90px;
+        height: 90px;
+    }
+    .social{
+        width: 200px;
+        height: 50px;
+        padding: 0px 20px 0px 20px;
+    }
+    .ico{
+        width: 25px;
+    }
+    .about{
+        font-size: 1.2em;
+        margin-top: 70px;
+    }
+    aside{
+        height: 380px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    aside > h1{
+        font-size: 24px;
+    }
+    .av{
+        height: 235px;
+    }
+    main{
+        margin-bottom: 100px;
+    }
+    .btn{
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+    .cnt{
+        max-width: 800px;
+    
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 300px;
+        gap: 100px;
+    }
+    .cara,.kraken,.coloso,.dorado{
+        width: 150px;
+        height: 150px;
+        background-size: 150px;
+    }
+    .vinyl_kraken,.vinyl_coloso,.vinyl_dorado,.vinyl_kraken_light,.vinyl_coloso_light,.vinyl_dorado_light{
+        width: 145px;
+        height: 145px;
+        position: absolute;
+        left: 0px;
+    }
+    .animacion_disco{
+        left: 80px;
+        animation: giro 2s;
+    }
+    .animacion_luz{
+        left: 80px;
+    }
+    .lista_kraken,.lista_coloso,.lista_dorado{
+        font-size: 1em;
+    }
+    .comprar_kraken,.comprar_coloso,.comprar_dorado{
+        width: 50px;
+        height: 50px;
+    }
+    .comprar_activo{
+        right: 30px;
+    }
+    .itunes{
+        width: 40px;
+    }
+    footer{
+        font-size: 17px;
+        text-align: center;
+        line-height: 50px;
+        height: 50px;
+    }
+}
+@media screen and (min-width: 750px){
+    .about{
+        font-size: 1.4em;
+        margin-top: 70px;
+    }
+    .cara,.kraken,.coloso,.dorado{
+        width: 210px;
+        height: 210px;
+        background-size: 210px;
+    }
+    .vinyl_kraken,.vinyl_coloso,.vinyl_dorado,.vinyl_kraken_light,.vinyl_coloso_light,.vinyl_dorado_light{
+        width: 205px;
+        height: 205px;
+        position: absolute;
+        left: 0px;
+    }
+    .animacion_disco{
+        left: 115px;
+        animation: giro 2s;
+    }
+    .animacion_luz{
+        left: 115px;
+    }
+    .lista_kraken,.lista_coloso,.lista_dorado{
+        font-size: 1.3em;
+    }
+    .comprar_activo{
+        right: 50px;
+    }
+}

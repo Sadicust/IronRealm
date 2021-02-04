@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/proyecto.css">
+    <link rel="stylesheet" href="css/splash.css">
+    <link rel="icon" href="css/imagen/logo_icon.png" type="image/png">
+    <title>IronRealm</title>
+</head>
+<body>
+    <div class="splash">
+		<div class="logo_splash"></div>
+	</div>
+    <header>
+        <div class="head_logo_social">
+            <div class="logo"></div>
+            <div class="social">
+                <a href="https://www.youtube.com/channel/UCNaCwkY7ELUnhadMF8vkOMA/featured" target="blank" class="ico yt"><img src="css/imagen/youtube.svg" alt="IronRealm - Youtube"></a>
+                <a href="https://twitter.com/iron_realm" target="blank" class="ico tw"><img src="css/imagen/twitter.svg" alt="IronRealm - Twitter"></a>
+                <a href="https://www.instagram.com/IronRealm_C/" target="blank" class="ico ins"><img src="css/imagen/instagram.svg" alt="IronRealm - Instagram"></a>
+            </div>
+        </div>
+        <div class="about">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nobis magni totam laborum aut, consectetur ex, perspiciatis suscipit ea atque, quae libero asperiores quibusdam molestiae deleniti numquam placeat illo a fugit nulla impedit in voluptate reiciendis voluptatibus fuga. Voluptates similique facere, sapiente beatae ipsa aut, quaerat soluta corrupti dolorum neque.</p>
+        </div>
+    </header>
+    <div class="header_vid">
+        <video autoplay loop muted class="vid_cont">
+            <source src="css/imagen/ironrealm_vid_mp4.mp4" type="video/mp4">
+            <source src="css/imagen/ironrealm_vid_webm.webm" type="video/webm">
+        </video>
+    </div>
+    <aside>
+        <h1>Available Now</h1>
+        <a href="https://music.apple.com/ca/album/ink" target="blank" class="av" alt="Itunes - Ink"></a>
+    </aside>
+    <main>
+        <div class="btn">
+            
+        </div>
+        <div class="cnt">
+            <div class="b">
+                <div class="cara">
+                    <img class="vinyl_kraken" src="css/imagen/vinyl_kraken.png">
+                    <img class="vinyl_kraken_light" src="css/imagen/vinyl_light.png">
+                    <div class="kraken"></div>
+                </div>
+                <div class="lista_kraken">
+                    <h1>The Beast</h1>
+                    <h5>IronRealm - 2019</h5>
+                    <br>
+                    <ol>
+                        <li>Blue Land</li>
+                        <li>Waves</li>
+                        <li>Lurking</li>
+                        <li>Hell On Sea</li>
+                        <li>The Remains</li>
+                    </ol>
+                </div>
+                <a href="https://music.apple.com/ca/album/thebeast" target="blank" class="comprar_kraken" alt="Itunes - The Beast" ><img class="itunes" src="css/imagen/itunes.svg" alt=""></a>
+            </div>
+            <div class="b">
+                <div class="cara">
+                    <img class="vinyl_coloso" src="css/imagen/vinyl_coloso.png">
+                    <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
+                    <div class="coloso"></div>
+                </div>
+                <div class="lista_coloso">
+                    <h1>Gargantuan</h1>
+                    <h5>IronRealm - 2017</h5>
+                    <br>
+                    <ol>
+                        <li>Simple Life</li>
+                        <li>Tremors</li>
+                        <li>Colossal</li>
+                        <li>The Watcher</li>
+                        <li>Eternal Dream</li>
+                    </ol>
+                </div>
+                <a href="https://music.apple.com/ca/album/gargantuan" target="blank" class="comprar_coloso" alt="Itunes - Gargantuan" ><img class="itunes" src="css/imagen/itunes.svg" alt=""></a>
+            </div>
+            <div class="b">
+                <div class="cara">
+                    <img class="vinyl_dorado" src="css/imagen/vinyl_dorado.png">
+                    <img class="vinyl_dorado_light" src="css/imagen/vinyl_light.png">
+                    <div class="dorado"></div>
+                </div>
+                <div class="lista_dorado">
+                    <h1>El Dorado</h1>
+                    <h5>IronRealm - 2015</h5>
+                    <br>
+                    <ol>
+                        <li>Depart</li>
+                        <li>Wild Green</li>
+                        <li>Discover</li>
+                        <li>Golden</li>
+                        <li>Curse</li>
+                    </ol>
+                </div>
+                <a href="https://music.apple.com/ca/album/eldorado" target="blank" class="comprar_dorado" alt="Itunes - El Dorado" ><img class="itunes" src="css/imagen/itunes.svg" alt=""></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        IronRealm ©
+    </footer>
+
+
+    <script type="text/javascript">
+        addEventListener('DOMContentLoaded', () => {
+			const car = document.querySelector('.kraken')
+			if(car){car.addEventListener('click', () => {
+                const vinyl = document.querySelector('.vinyl_kraken')
+                const vinyl_light = document.querySelector('.vinyl_kraken_light')
+                const lista = document.querySelector('.lista_kraken')
+                const color = document.querySelector('.kraken')
+                const pos = document.querySelector('.cara')
+                const compra = document.querySelector('.comprar_kraken')
+                vinyl.classList.toggle('animacion_disco')
+                vinyl_light.classList.toggle('animacion_luz')
+                lista.classList.toggle('lista_activa')
+                color.classList.toggle('color')
+                pos.classList.toggle('cara_pos')
+                compra.classList.toggle('comprar_activo')
+                })
+			}
+        })
+        addEventListener('DOMContentLoaded', () => {
+			const car = document.querySelector('.coloso')
+			if(car){car.addEventListener('click', () => {
+                const vinyl = document.querySelector('.vinyl_coloso')
+                const vinyl_light = document.querySelector('.vinyl_coloso_light')
+                const lista = document.querySelector('.lista_coloso')
+                const color = document.querySelector('.coloso')
+                const compra = document.querySelector('.comprar_coloso')
+                vinyl.classList.toggle('animacion_disco')
+                vinyl_light.classList.toggle('animacion_luz')
+                lista.classList.toggle('lista_activa')
+                color.classList.toggle('color')
+                compra.classList.toggle('comprar_activo')
+                })
+			}
+        })
+        addEventListener('DOMContentLoaded', () => {
+			const car = document.querySelector('.dorado')
+			if(car){car.addEventListener('click', () => {
+                const vinyl = document.querySelector('.vinyl_dorado')
+                const vinyl_light = document.querySelector('.vinyl_dorado_light')
+                const lista = document.querySelector('.lista_dorado')
+                const color = document.querySelector('.dorado')
+                const compra = document.querySelector('.comprar_dorado')
+                vinyl.classList.toggle('animacion_disco')
+                vinyl_light.classList.toggle('animacion_luz')
+                lista.classList.toggle('lista_activa')
+                color.classList.toggle('color')
+                compra.classList.toggle('comprar_activo')
+                })
+			}
+        })
+    </script>
+</body>
+</html>
