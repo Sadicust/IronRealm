@@ -159,7 +159,8 @@ main{
     margin-bottom: 40px;
 }
 .cnt{
-    max-width: 500px;
+    max-width: 380px;
+    min-width: 315px;
     width: 95%;
 
     display: grid;
@@ -191,7 +192,7 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: 8%;
+    margin-left: 6%;
     overflow-x: visible;
 }
 .kraken,.coloso,.dorado{
@@ -260,8 +261,12 @@ main{
     font-size: 45px;
     font-weight: bold;
 }
+.lista_kraken>h1,.lista_coloso>h1,.lista_dorado>h1{
+    font-size: 15px;
+    margin-left: 15px;
+}
 .lista_kraken>h5,.lista_coloso>h5,.lista_dorado>h5{
-    margin-left: 10px;
+    margin-left: 25px;
 }
 .comprar_kraken,.comprar_coloso,.comprar_dorado{
     background-color: #626068;
@@ -353,6 +358,7 @@ footer{
     }
     .cnt{
         max-width: 800px;
+        width: 80%;
         grid-auto-rows: 220px;
     }
     .cara,.kraken,.coloso,.dorado{
