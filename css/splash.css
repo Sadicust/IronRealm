@@ -12,7 +12,7 @@
 	-moz-animation: splash 2s;
 	animation: splash 2s;
 	z-index: 2;
-	overflow-y: hidden;
+	overflow: hidden;
 	
 }
 .logo_splash{
