@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/proyecto.css">
     <link rel="stylesheet" href="css/splash.css">
-    <link rel="stylesheet" href="css/ironrealm.css">
-    <link rel="icon" href="css/recurso/logo_icon.png" type="image/png">
+    <link rel="icon" href="css/imagen/logo_icon.png" type="image/png">
     <title>IronRealm</title>
 </head>
 <body>
@@ -28,27 +28,26 @@
     </header>
     <div class="header_vid">
         <video autoplay loop muted class="vid_cont">
-            <source src="css/recurso/ironrealm_vid_mp4.mp4" type="video/mp4">
-            <source src="css/recurso/ironrealm_vid_webm.webm" type="video/webm">
+            <source src="css/imagen/ironrealm_vid_mp4.mp4" type="video/mp4">
+            <source src="css/imagen/ironrealm_vid_webm.webm" type="video/webm">
         </video>
     </div>
     <aside>
         <h1>Available Now</h1>
         <a href="https://music.apple.com/ca/album/ink" target="blank" class="av" alt="Itunes - Ink"></a>
     </aside>
-    <div class="btn">
-        <p class="upcoming">See upcoming albums</p>
-        <p class="released">See released albums</p>
-    </div>
     <main>
+        <div class="btn">
+            
+        </div>
         <div class="cnt">
-            <div class="album">
+            <div class="b">
                 <div class="cara">
-                    <img class="vinyl_kraken" src="css/recurso/vinyl_kraken.png">
-                    <img class="vinyl_kraken_light" src="css/recurso/vinyl_light.png">
+                    <img class="vinyl_kraken" src="css/imagen/vinyl_kraken.png">
+                    <img class="vinyl_kraken_light" src="css/imagen/vinyl_light.png">
                     <div class="kraken"></div>
                 </div>
-                <div class="info_kraken">
+                <div class="lista_kraken">
                     <h1>The Beast</h1>
                     <h5>IronRealm - 2019</h5>
                     <br>
@@ -63,13 +62,13 @@
                 <a href="https://music.apple.com/ca/album/thebeast" target="blank" class="comprar_kraken" alt="Itunes - The Beast" ><div class="itunes"></div>
                 </a>
             </div>
-            <div class="album">
+            <div class="b">
                 <div class="cara">
-                    <img class="vinyl_coloso" src="css/recurso/vinyl_coloso.png">
-                    <img class="vinyl_coloso_light" src="css/recurso/vinyl_light.png">
+                    <img class="vinyl_coloso" src="css/imagen/vinyl_coloso.png">
+                    <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
                     <div class="coloso"></div>
                 </div>
-                <div class="info_coloso">
+                <div class="lista_coloso">
                     <h1>Gargantuan</h1>
                     <h5>IronRealm - 2017</h5>
                     <br>
@@ -83,13 +82,13 @@
                 </div>
                 <a href="https://music.apple.com/ca/album/gargantuan" target="blank" class="comprar_coloso" alt="Itunes - Gargantuan" ><div class="itunes"></div></a>
             </div>
-            <div class="album">
+            <div class="b">
                 <div class="cara">
-                    <img class="vinyl_dorado" src="css/recurso/vinyl_dorado.png">
-                    <img class="vinyl_dorado_light" src="css/recurso/vinyl_light.png">
+                    <img class="vinyl_dorado" src="css/imagen/vinyl_dorado.png">
+                    <img class="vinyl_dorado_light" src="css/imagen/vinyl_light.png">
                     <div class="dorado"></div>
                 </div>
-                <div class="info_dorado">
+                <div class="lista_dorado">
                     <h1>El Dorado</h1>
                     <h5>IronRealm - 2015</h5>
                     <br>
@@ -104,26 +103,6 @@
                 <a href="https://music.apple.com/ca/album/eldorado" target="blank" class="comprar_dorado" alt="Itunes - El Dorado" ><div class="itunes"></div></a>
             </div>
         </div>
-        <div class="coming">
-            <div class="album album_coming">
-                <div class="cara">
-                    <div class="noche"></div>
-                </div>
-                <div class="info_noche">
-                    <h1>Noche Fria</h1>
-                    <h4>IronRealm - 2021</h4>
-                </div>
-            </div>
-            <div class="album album_coming">
-                <div class="cara">
-                    <div class="race"></div>
-                </div>
-                <div class="info_race">
-                    <h1>SpaceRace</h1>
-                    <h4>IronRealm - TBA</h4>
-                </div>
-            </div>
-        </div>
     </main>
     <footer>
         IronRealm ©
@@ -132,31 +111,17 @@
 
     <script type="text/javascript">
         addEventListener('DOMContentLoaded', () => {
-		    const btn = document.querySelector('.btn')
-		    if(btn){btn.addEventListener('click', () => {
-                const upcoming = document.querySelector('.upcoming')
-                const ctn = document.querySelector('.cnt')
-                const coming = document.querySelector('.coming')
-                const released = document.querySelector('.released')
-                upcoming.classList.toggle('upcoming_activo')
-                released.classList.toggle('released_activo')
-                ctn.classList.toggle('cnt_activo')
-                coming.classList.toggle('coming_activo')
-                })
-			}
-        })
-        addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('.kraken')
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_kraken')
                 const vinyl_light = document.querySelector('.vinyl_kraken_light')
-                const info = document.querySelector('.info_kraken')
+                const lista = document.querySelector('.lista_kraken')
                 const color = document.querySelector('.kraken')
                 const pos = document.querySelector('.cara')
                 const compra = document.querySelector('.comprar_kraken')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
-                info.classList.toggle('info_activa')
+                lista.classList.toggle('lista_activa')
                 color.classList.toggle('color')
                 pos.classList.toggle('cara_pos')
                 compra.classList.toggle('comprar_activo')
@@ -168,12 +133,12 @@
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_coloso')
                 const vinyl_light = document.querySelector('.vinyl_coloso_light')
-                const info = document.querySelector('.info_coloso')
+                const lista = document.querySelector('.lista_coloso')
                 const color = document.querySelector('.coloso')
                 const compra = document.querySelector('.comprar_coloso')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
-                info.classList.toggle('info_activa')
+                lista.classList.toggle('lista_activa')
                 color.classList.toggle('color')
                 compra.classList.toggle('comprar_activo')
                 })
@@ -184,34 +149,14 @@
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_dorado')
                 const vinyl_light = document.querySelector('.vinyl_dorado_light')
-                const info = document.querySelector('.info_dorado')
+                const lista = document.querySelector('.lista_dorado')
                 const color = document.querySelector('.dorado')
                 const compra = document.querySelector('.comprar_dorado')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
-                info.classList.toggle('info_activa')
+                lista.classList.toggle('lista_activa')
                 color.classList.toggle('color')
                 compra.classList.toggle('comprar_activo')
-                })
-			}
-        })
-        addEventListener('DOMContentLoaded', () => {
-			const car = document.querySelector('.noche')
-			if(car){car.addEventListener('click', () => {
-                const info = document.querySelector('.info_noche')
-                const color = document.querySelector('.noche')
-                info.classList.toggle('info_activa')
-                color.classList.toggle('color')
-                })
-			}
-        })
-        addEventListener('DOMContentLoaded', () => {
-			const car = document.querySelector('.race')
-			if(car){car.addEventListener('click', () => {
-                const info = document.querySelector('.info_race')
-                const color = document.querySelector('.race')
-                info.classList.toggle('info_activa')
-                color.classList.toggle('color')
                 })
 			}
         })
