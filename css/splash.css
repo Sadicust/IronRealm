@@ -11,7 +11,7 @@
 	-webkit-animation: splash 2s;
 	-moz-animation: splash 2s;
 	animation: splash 2s;
-	z-index: 2;
+	z-index: 3;
 	overflow: hidden;
 	
 }

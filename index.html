@@ -34,12 +34,39 @@
     </div>
     <aside>
         <h1>Available Now</h1>
-        <a href="https://music.apple.com/ca/album/ink" target="blank" class="av" alt="Itunes - Ink"></a>
+        <a href="https://music.apple.com/ca/album/spacerace" target="blank" class="race">
+            <div class="capa ttl"><img src="css/imagen/spacerace_ttl.png" alt=""></div>
+            <div class="capa estrellas"><img src="css/imagen/estrellas.png" alt=""></div>
+            <div class="capa tierra"><img src="css/imagen/race_1.png" alt=""></div>
+            <div class="capa rus"><img src="css/imagen/race_2.png" alt=""></div>
+            <div class="capa luna"><img src="css/imagen/race_3.png" alt=""></div>
+        </a>
     </aside>
     <main>
         <h1>Released Albums</h1>
         <div class="cnt">
-            <div class="b">
+            <div id="NocheFria" class="b">
+                <div class="cara">
+                    <img class="vinyl_noche" src="css/imagen/vinyl_noche.png">
+                    <img class="vinyl_noche_light" src="css/imagen/vinyl_light.png">
+                    <div class="noche"></div>
+                </div>
+                <div class="lista_noche">
+                    <h1>Noche Fria</h1>
+                    <h5>IronRealm - 2018</h5>
+                    <br>
+                    <ol>
+                        <li>Anxiety</li>
+                        <li>Matter</li>
+                        <li>Just be</li>
+                        <li>Far Sky</li>
+                        <li>Here</li>
+                    </ol>
+                </div>
+                <a href="https://music.apple.com/ca/album/nochefria" target="blank" class="comprar_noche" alt="Itunes - Noche Fria" ><div class="itunes"></div>
+                </a>
+            </div>
+            <div id="TheBeast" class="b">
                 <div class="cara">
                     <img class="vinyl_kraken" src="css/imagen/vinyl_kraken.png">
                     <img class="vinyl_kraken_light" src="css/imagen/vinyl_light.png">
@@ -47,7 +74,7 @@
                 </div>
                 <div class="lista_kraken">
                     <h1>The Beast</h1>
-                    <h5>IronRealm - 2019</h5>
+                    <h5>IronRealm - 2016</h5>
                     <br>
                     <ol>
                         <li>Blue Land</li>
@@ -60,7 +87,7 @@
                 <a href="https://music.apple.com/ca/album/thebeast" target="blank" class="comprar_kraken" alt="Itunes - The Beast" ><div class="itunes"></div>
                 </a>
             </div>
-            <div class="b">
+            <div id="Gargantuan" class="b">
                 <div class="cara">
                     <img class="vinyl_coloso" src="css/imagen/vinyl_coloso.png">
                     <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
@@ -68,7 +95,7 @@
                 </div>
                 <div class="lista_coloso">
                     <h1>Gargantuan</h1>
-                    <h5>IronRealm - 2017</h5>
+                    <h5>IronRealm - 2014</h5>
                     <br>
                     <ol>
                         <li>Simple Life</li>
@@ -80,7 +107,7 @@
                 </div>
                 <a href="https://music.apple.com/ca/album/gargantuan" target="blank" class="comprar_coloso" alt="Itunes - Gargantuan" ><div class="itunes"></div></a>
             </div>
-            <div class="b">
+            <div id="ElDorado" class="b">
                 <div class="cara">
                     <img class="vinyl_dorado" src="css/imagen/vinyl_dorado.png">
                     <img class="vinyl_dorado_light" src="css/imagen/vinyl_light.png">
@@ -88,7 +115,7 @@
                 </div>
                 <div class="lista_dorado">
                     <h1>El Dorado</h1>
-                    <h5>IronRealm - 2015</h5>
+                    <h5>IronRealm - 2012</h5>
                     <br>
                     <ol>
                         <li>Depart</li>
@@ -108,6 +135,24 @@
 
 
     <script type="text/javascript">
+        addEventListener('DOMContentLoaded', () => {
+			const car = document.querySelector('.noche')
+			if(car){car.addEventListener('click', () => {
+                const vinyl = document.querySelector('.vinyl_noche')
+                const vinyl_light = document.querySelector('.vinyl_noche_light')
+                const lista = document.querySelector('.lista_noche')
+                const color = document.querySelector('.noche')
+                const pos = document.querySelector('.cara')
+                const compra = document.querySelector('.comprar_noche')
+                vinyl.classList.toggle('animacion_disco')
+                vinyl_light.classList.toggle('animacion_luz')
+                lista.classList.toggle('lista_activa')
+                color.classList.toggle('color')
+                pos.classList.toggle('cara_pos')
+                compra.classList.toggle('comprar_activo')
+                })
+			}
+        })
         addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('.kraken')
 			if(car){car.addEventListener('click', () => {
