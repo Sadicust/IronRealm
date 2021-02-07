@@ -148,53 +148,51 @@ aside >h1{
 }
 .capa{
     position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .ttl{
+    background-image: url("imagen/spacerace_ttl.png");
     width: 30%;
+    height: 70%;
     top: 13%;
     left: 25%;
     animation: flotar_ttl 5s infinite ease-in-out alternate;
 }
-.ttl img{
-    width: 100%;
-}
 .estrellas{
+    background-image: url("imagen/estrellas.png");
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     animation: flotar_estrellas 5s infinite ease-in-out alternate;
 }
-.estrellas img{
-    width: 100%;
-}
 .tierra{
+    background-image: url("imagen/race_1.png");
     width: 25%;
+    height: 110%;
     top: -5%;
     left: -2.5%;
     animation: flotar_tierra 5s infinite ease-in-out alternate;
 }
-.tierra img{
-    width: 100%;
-}
 .rus{
+    background-image: url("imagen/race_2.png");
     width: 20%;
+    height: 60%;
     left: 15%;
     top: 60%;
     animation: flotar_rus 10s infinite ease-in-out alternate;
 
 }
-.rus img{
-    width: 100%;
-}
 .luna{
+    background-image: url("imagen/race_3.png");
     width: 50%;
+    height: 100%;
     top: 5%;
     right: -7%;
     transform: rotate(3deg);
     animation: flotar_luna 10s infinite ease-in-out alternate;
 
-}
-.luna img{
-    width: 100%;
 }
 @keyframes flotar_ttl{
     0% {transform: translate(-6%,7%);}
