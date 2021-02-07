@@ -68,6 +68,9 @@ header{
     right: 10px;
     z-index: 2;
 }
+.btn:hover{
+    cursor: pointer;
+}
 .ico{
     width: 20px;
     height: 20px;
