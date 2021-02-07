@@ -7,7 +7,6 @@
     user-select: none;
     outline: none;
 }
-
 body{
     background-color: #27262a;
 }
@@ -41,17 +40,33 @@ header{
 
     width: 150px;
     height: 40px;
-    margin-right: 10px;
     padding: 0px 20px 0px 20px;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    right: 0px;
+    right: 60px;
     z-index: 2;
 
     transition: .2s;
+}
+.btn{
+    background-color: #55535a50;
+    border: 1px solid #B0AEB790;
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
 }
 .ico{
     width: 20px;
@@ -295,7 +310,7 @@ main{
 .animacion_disco{
     opacity: 1;
 	left: 55px;
-	animation: giro 2s;
+	animation: giro 13s ease-out;
 }
 .animacion_luz{
     opacity: 1;
@@ -303,7 +318,7 @@ main{
 }
 @keyframes giro {
     0% {transform: rotate(-135deg)} 
-    100% {transform: rotate(360deg)} 
+    100% {transform: rotate(1800deg)} 
 }
 
 .lista_noche,.lista_kraken,.lista_coloso,.lista_dorado{
@@ -436,7 +451,6 @@ footer{
     }
     .animacion_disco{
         left: 80px;
-        animation: giro 2s;
     }
     .animacion_luz{
         left: 80px;
@@ -489,7 +503,6 @@ footer{
     }
     .animacion_disco{
         left: 115px;
-        animation: giro 2s;
     }
     .animacion_luz{
         left: 115px;

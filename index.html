@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/proyecto.css">
     <link rel="stylesheet" href="css/splash.css">
     <link rel="icon" href="css/imagen/logo_icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>IronRealm</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
     <header>
         <div class="head_logo_social">
             <div class="logo"></div>
+            <div class="btn" onclick="mute()"><i class="fa fa-volume-up" aria-hidden="true" id="altavoz"></i></div>
             <div class="social">
                 <a href="https://www.youtube.com/channel/UCNaCwkY7ELUnhadMF8vkOMA/featured" target="blank" class="ico yt"></a>
                 <a href="https://twitter.com/iron_realm" target="blank" class="ico tw"></a>
@@ -70,7 +72,11 @@
                 <div class="cara">
                     <img class="vinyl_kraken" src="css/imagen/vinyl_kraken.png">
                     <img class="vinyl_kraken_light" src="css/imagen/vinyl_light.png">
-                    <div class="kraken"></div>
+                    <div class="kraken" onclick="lurking()">
+                        <audio id="audio_lurking">
+                            <source src="css/sonido/lurking.wav" type="audio/wav">
+                        </audio>
+                    </div>
                 </div>
                 <div class="lista_kraken">
                     <h1>The Beast</h1>
@@ -91,7 +97,11 @@
                 <div class="cara">
                     <img class="vinyl_coloso" src="css/imagen/vinyl_coloso.png">
                     <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
-                    <div class="coloso"></div>
+                    <div class="coloso" onclick="watching()">
+                        <audio id="audio_watching" >
+                            <source src="css/sonido/lurking.wav" type="audio/wav">
+                        </audio>
+                    </div>
                 </div>
                 <div class="lista_coloso">
                     <h1>Gargantuan</h1>
@@ -132,8 +142,60 @@
     <footer>
         IronRealm ©
     </footer>
-
-
+    <script>
+        const aud_lurking = document.getElementById("audio_lurking");
+        const aud_watching = document.getElementById("audio_watching");
+        var count_silencio = 0;
+        function mute() { 
+            if (count_silencio == 0){
+                count_silencio = 1;
+                aud_lurking.muted = true;
+                aud_watching.muted = true;
+            }else{
+                count_silencio = 0;
+                aud_lurking.muted = false;
+                aud_watching.muted = false;
+            }
+        }
+    </script>
+    <script>
+        const audio_lurking = document.getElementById('audio_lurking');
+        const audio_watching = document.getElementById('audio_watching');
+        var count_lurking = 0;
+        var count_watching = 0;
+        function lurking(){
+            if(count_lurking == 0){
+                count_lurking = 1;
+                audio_lurking.play();
+                audio_watching.pause();
+                audio.watching.currentTime = 0;
+            }else{
+                count_lurking = 0;
+                audio_lurking.pause();
+                audio_lurking.currentTime = 0;
+            }
+        }
+        function watching(){
+            if(count_watching == 0){
+                count_watching = 1;
+                audio_watching.play();
+                audio_lurking.pause();
+                audio.lurking.currentTime = 0;
+            }else{
+                count_watching = 0;
+                audio_watching.pause();
+                audio_watching.currentTime = 0;
+            }
+        }
+        addEventListener('DOMContentLoaded',function(){
+            var btn = document.querySelector(".btn");
+            var altavoz = document.querySelector("#altavoz")
+            btn.addEventListener('click',function(){
+                altavoz.classList.toggle('fa-volume-up');
+                altavoz.classList.toggle('fa-volume-off');
+            })
+        })
+    </script>
     <script type="text/javascript">
         addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('.noche')
