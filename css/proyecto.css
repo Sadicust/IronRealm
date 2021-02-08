@@ -278,7 +278,7 @@ main{
 	justify-content: flex-start;
 	background-repeat: no-repeat;
     border-radius: 2px;
-    box-shadow: 5px 10px 15px #1f1e20;
+    box-shadow: 5px 10px 15px #111111a9;
     filter: grayscale(.7);
     transition: .2s;
 }
@@ -311,7 +311,7 @@ main{
 .animacion_disco{
     opacity: 1;
 	left: 55px;
-	animation: giro 13s ease-out;
+	animation: giro 13.5s ease-out;
 }
 .animacion_luz{
     opacity: 1;

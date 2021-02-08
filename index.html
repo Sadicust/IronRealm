@@ -51,7 +51,11 @@
                 <div class="cara">
                     <img class="vinyl_noche" src="css/imagen/vinyl_noche.png">
                     <img class="vinyl_noche_light" src="css/imagen/vinyl_light.png">
-                    <div class="noche"></div>
+                    <div class="noche" onclick="sky()">
+                        <audio id="audio_sky" >
+                            <source src="css/sonido/simple-life.wav" type="audio/wav">
+                        </audio>
+                    </div>
                 </div>
                 <div class="lista_noche">
                     <h1>Noche Fria</h1>
@@ -99,7 +103,7 @@
                     <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
                     <div class="coloso" onclick="watching()">
                         <audio id="audio_watching" >
-                            <source src="css/sonido/lurking.wav" type="audio/wav">
+                            <source src="css/sonido/simple-life.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
@@ -121,7 +125,11 @@
                 <div class="cara">
                     <img class="vinyl_dorado" src="css/imagen/vinyl_dorado.png">
                     <img class="vinyl_dorado_light" src="css/imagen/vinyl_light.png">
-                    <div class="dorado"></div>
+                    <div class="dorado" onclick="discover()">
+                        <audio id="audio_discover" >
+                            <source src="css/sonido/simple-life.wav" type="audio/wav">
+                        </audio>
+                    </div>
                 </div>
                 <div class="lista_dorado">
                     <h1>El Dorado</h1>
@@ -143,32 +151,64 @@
         IronRealm ©
     </footer>
     <script>
+        const aud_sky = document.getElementById("audio_sky");
         const aud_lurking = document.getElementById("audio_lurking");
         const aud_watching = document.getElementById("audio_watching");
+        const aud_discover = document.getElementById("audio_discover");
         var count_silencio = 0;
         function mute() { 
             if (count_silencio == 0){
                 count_silencio = 1;
+                
+                aud_sky.muted = true;
                 aud_lurking.muted = true;
                 aud_watching.muted = true;
+                aud_discover.muted = true;
+                
             }else{
                 count_silencio = 0;
+                aud_sky.muted = false;
                 aud_lurking.muted = false;
                 aud_watching.muted = false;
+                aud_discover.muted = false;
             }
         }
     </script>
     <script>
+        const audio_sky = document.getElementById('audio_sky');
         const audio_lurking = document.getElementById('audio_lurking');
         const audio_watching = document.getElementById('audio_watching');
+        const audio_discover = document.getElementById('audio_discover');
+        var count_sky = 0;
         var count_lurking = 0;
         var count_watching = 0;
+        var count_discover = 0;
+        function sky(){
+            if(count_sky == 0){
+                count_sky = 1;
+                audio_sky.play();
+                audio_lurking.pause();
+                audio_lurking.currentTime = 0;
+                audio_watching.pause();
+                audio_watching.currentTime = 0;
+                audio_discover.pause();
+                audio_discover.currentTime = 0;
+            }else{
+                count_sky = 0;
+                audio_sky.pause();
+                audio_sky.currentTime = 0;
+            }
+        }
         function lurking(){
             if(count_lurking == 0){
                 count_lurking = 1;
                 audio_lurking.play();
+                audio_sky.pause();
+                audio_sky.currentTime = 0;
                 audio_watching.pause();
-                audio.watching.currentTime = 0;
+                audio_watching.currentTime = 0;
+                audio_discover.pause();
+                audio_discover.currentTime = 0;
             }else{
                 count_lurking = 0;
                 audio_lurking.pause();
@@ -179,12 +219,32 @@
             if(count_watching == 0){
                 count_watching = 1;
                 audio_watching.play();
+                audio_sky.pause();
+                audio_sky.currentTime = 0;
                 audio_lurking.pause();
-                audio.lurking.currentTime = 0;
+                audio_lurking.currentTime = 0;
+                audio_discover.pause();
+                audio_discover.currentTime = 0;
             }else{
                 count_watching = 0;
                 audio_watching.pause();
                 audio_watching.currentTime = 0;
+            }
+        }
+        function discover(){
+            if(count_discover == 0){
+                count_discover = 1;
+                audio_discover.play();
+                audio_sky.pause();
+                audio_sky.currentTime = 0;
+                audio_lurking.pause();
+                audio_lurking.currentTime = 0;
+                audio_watching.pause();
+                audio_watching.currentTime = 0;
+            }else{
+                count_discover = 0;
+                audio_discover.pause();
+                audio_discover.currentTime = 0;
             }
         }
         addEventListener('DOMContentLoaded',function(){
