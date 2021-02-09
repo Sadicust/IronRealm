@@ -257,6 +257,7 @@ main{
 }
 .b:hover{
     background: linear-gradient(90deg, #66646d 0%,#37363b 80%);
+    cursor: pointer;
 }
 .cara,.noche,.kraken,.coloso,.dorado{
     width: 100px;
@@ -281,9 +282,6 @@ main{
     box-shadow: 5px 10px 15px #111111a9;
     filter: grayscale(.7);
     transition: .2s;
-}
-.noche:hover,.kraken:hover,.coloso:hover,.dorado:hover{
-    cursor: pointer;
 }
 .color{
     filter: grayscale(0);

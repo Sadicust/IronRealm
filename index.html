@@ -47,13 +47,13 @@
     <main>
         <h1>Released Albums</h1>
         <div class="cnt">
-            <div id="NocheFria" class="b">
+            <div id="nochefria" class="b" onclick="sky()">
                 <div class="cara">
                     <img class="vinyl_noche" src="css/imagen/vinyl_noche.png">
                     <img class="vinyl_noche_light" src="css/imagen/vinyl_light.png">
-                    <div class="noche" onclick="sky()">
+                    <div class="noche">
                         <audio id="audio_sky" >
-                            <source src="css/sonido/simple-life.wav" type="audio/wav">
+                            <source src="css/sonido/anxiety.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
@@ -72,11 +72,11 @@
                 <a href="https://music.apple.com/ca/album/nochefria" target="blank" class="comprar_noche" alt="Itunes - Noche Fria" ><div class="itunes"></div>
                 </a>
             </div>
-            <div id="TheBeast" class="b">
+            <div id="thebeast" class="b" onclick="lurking()">
                 <div class="cara">
                     <img class="vinyl_kraken" src="css/imagen/vinyl_kraken.png">
                     <img class="vinyl_kraken_light" src="css/imagen/vinyl_light.png">
-                    <div class="kraken" onclick="lurking()">
+                    <div class="kraken">
                         <audio id="audio_lurking">
                             <source src="css/sonido/lurking.wav" type="audio/wav">
                         </audio>
@@ -97,11 +97,11 @@
                 <a href="https://music.apple.com/ca/album/thebeast" target="blank" class="comprar_kraken" alt="Itunes - The Beast" ><div class="itunes"></div>
                 </a>
             </div>
-            <div id="Gargantuan" class="b">
+            <div id="gargantuan" class="b" onclick="watching()">
                 <div class="cara">
                     <img class="vinyl_coloso" src="css/imagen/vinyl_coloso.png">
                     <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
-                    <div class="coloso" onclick="watching()">
+                    <div class="coloso">
                         <audio id="audio_watching" >
                             <source src="css/sonido/simple-life.wav" type="audio/wav">
                         </audio>
@@ -121,11 +121,11 @@
                 </div>
                 <a href="https://music.apple.com/ca/album/gargantuan" target="blank" class="comprar_coloso" alt="Itunes - Gargantuan" ><div class="itunes"></div></a>
             </div>
-            <div id="ElDorado" class="b">
+            <div id="eldorado" class="b" onclick="discover()">
                 <div class="cara">
                     <img class="vinyl_dorado" src="css/imagen/vinyl_dorado.png">
                     <img class="vinyl_dorado_light" src="css/imagen/vinyl_light.png">
-                    <div class="dorado" onclick="discover()">
+                    <div class="dorado">
                         <audio id="audio_discover" >
                             <source src="css/sonido/simple-life.wav" type="audio/wav">
                         </audio>
@@ -258,7 +258,7 @@
     </script>
     <script type="text/javascript">
         addEventListener('DOMContentLoaded', () => {
-			const car = document.querySelector('.noche')
+			const car = document.querySelector('#nochefria')
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_noche')
                 const vinyl_light = document.querySelector('.vinyl_noche_light')
@@ -276,7 +276,7 @@
 			}
         })
         addEventListener('DOMContentLoaded', () => {
-			const car = document.querySelector('.kraken')
+			const car = document.querySelector('#thebeast')
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_kraken')
                 const vinyl_light = document.querySelector('.vinyl_kraken_light')
@@ -294,7 +294,7 @@
 			}
         })
         addEventListener('DOMContentLoaded', () => {
-			const car = document.querySelector('.coloso')
+			const car = document.querySelector('#gargantuan')
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_coloso')
                 const vinyl_light = document.querySelector('.vinyl_coloso_light')
@@ -310,7 +310,7 @@
 			}
         })
         addEventListener('DOMContentLoaded', () => {
-			const car = document.querySelector('.dorado')
+			const car = document.querySelector('#eldorado')
 			if(car){car.addEventListener('click', () => {
                 const vinyl = document.querySelector('.vinyl_dorado')
                 const vinyl_light = document.querySelector('.vinyl_dorado_light')
