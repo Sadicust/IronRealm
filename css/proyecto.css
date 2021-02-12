@@ -418,9 +418,9 @@ main{
     filter: invert(1);
 }
 .efecto-btn-comprar{
-    background-color: #d5d4d800;
-    width: 45px;
-    height: 45px;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
     border-radius: 25px;
     box-shadow: 0px 0px 10px white;
     position: absolute;
@@ -542,6 +542,10 @@ footer{
     .itunes{
         width: 40px;
         height: 40px;
+    }
+    .efecto-btn-comprar{
+        width: 45px;
+        height: 45px;
     }
     footer{
         font-size: 17px;
