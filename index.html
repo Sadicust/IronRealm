@@ -15,7 +15,7 @@
 	</div>
     <header>
         <div class="head_logo_social">
-            <div class="logo"></div>
+            <a href="./index.html" class="logo"></a>
             <div class="btn" onclick="mute()"><i class="fa fa-volume-up" aria-hidden="true" id="altavoz"></i></div>
             <div class="social">
                 <a href="https://www.youtube.com/channel/UCNaCwkY7ELUnhadMF8vkOMA/featured" target="blank" class="ico yt"></a>
@@ -24,8 +24,8 @@
             </div>
         </div>
         <div class="about">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nobis magni totam laborum aut, consectetur ex, perspiciatis suscipit ea atque, quae libero asperiores quibusdam molestiae deleniti numquam placeat illo a fugit nulla impedit in voluptate reiciendis voluptatibus fuga. Voluptates similique facere, sapiente beatae ipsa aut, quaerat soluta corrupti dolorum neque.</p>
+            <h1>About Me</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nisi tempora distinctio recusandae perferendis, officiis, vitae nulla vel adipisci error sequi alias sapiente repudiandae molestiae.</p>
         </div>
     </header>
     <div class="header_vid">
@@ -33,10 +33,13 @@
             <source src="css/imagen/ironrealm_vid_mp4.mp4" type="video/mp4">
             <source src="css/imagen/ironrealm_vid_webm.webm" type="video/webm">
         </video>
+        
     </div>
     <aside>
         <h1>Available Now</h1>
+        <p>SpaceRace, my latest album, is available now for purchase.</p>
         <a href="https://music.apple.com/ca/album/spacerace" target="blank" class="race">
+            <div class="capa smb"></div>
             <div class="capa ttl"></div>
             <div class="capa estrellas"></div>
             <div class="capa tierra"></div>
@@ -69,7 +72,9 @@
                         <li>Here</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/nochefria" target="blank" class="comprar_noche" alt="Itunes - Noche Fria" ><div class="itunes"></div>
+                <a href="https://music.apple.com/ca/album/nochefria" target="blank" id="btn-compra" class="comprar_noche" title="Itunes - Noche Fria" >
+                    <div class="itunes"></div>
+                    <div class="efecto-btn-comprar"></div>
                 </a>
             </div>
             <div id="thebeast" class="b" onclick="lurking()">
@@ -94,7 +99,9 @@
                         <li>The Remains</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/thebeast" target="blank" class="comprar_kraken" alt="Itunes - The Beast" ><div class="itunes"></div>
+                <a href="https://music.apple.com/ca/album/thebeast" target="blank" id="btn-compra" class="comprar_kraken" title="Itunes - The Beast" >
+                    <div class="itunes"></div>
+                    <div class="efecto-btn-comprar"></div>
                 </a>
             </div>
             <div id="gargantuan" class="b" onclick="watching()">
@@ -119,7 +126,10 @@
                         <li>Eternal Dream</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/gargantuan" target="blank" class="comprar_coloso" alt="Itunes - Gargantuan" ><div class="itunes"></div></a>
+                <a href="https://music.apple.com/ca/album/gargantuan" target="blank" id="btn-compra" class="comprar_coloso" title="Itunes - Gargantuan">
+                    <div class="itunes"></div>
+                    <div class="efecto-btn-comprar"></div>
+                </a>
             </div>
             <div id="eldorado" class="b" onclick="discover()">
                 <div class="cara">
@@ -143,7 +153,10 @@
                         <li>Curse</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/eldorado" target="blank" class="comprar_dorado" alt="Itunes - El Dorado" ><div class="itunes"></div></a>
+                <a href="https://music.apple.com/ca/album/eldorado" target="blank" id="btn-compra" class="comprar_dorado" title="Itunes - El Dorado" >
+                    <div class="itunes"></div>
+                    <div class="efecto-btn-comprar"></div>
+                </a>
             </div>
         </div>
     </main>
@@ -159,7 +172,6 @@
         function mute() { 
             if (count_silencio == 0){
                 count_silencio = 1;
-                
                 aud_sky.muted = true;
                 aud_lurking.muted = true;
                 aud_watching.muted = true;
@@ -174,7 +186,7 @@
             }
         }
     </script>
-    <script>
+    <script type="text/javascript">
         const audio_sky = document.getElementById('audio_sky');
         const audio_lurking = document.getElementById('audio_lurking');
         const audio_watching = document.getElementById('audio_watching');

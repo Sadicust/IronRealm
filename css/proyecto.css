@@ -16,19 +16,30 @@ header{
     height: 400px;
     overflow: hidden;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transition: .2s;
 }
 .head_logo_social{
+    width: 100%;
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: space-between;
 }
 .logo{
-    background-image: url("imagen/logo.svg");
+    background-image: url("imagen/imagotipo.svg");
     background-repeat: no-repeat;
+    filter: invert(1);
 
-    width: 80px;
-    height: 80px;
-    margin: 10px;
+    width: 120px;
+    height: 50px;
+    /* margin: 20px 0px 0px 20px; */
+    position: absolute;
+    left: 20px;
+    top: 20px;
 
     transition: .2s;
 }
@@ -87,21 +98,25 @@ header{
     background-image: url("imagen/instagram.svg");
 }
 .about{
-    width: 60%;
+    width: 75%;
     max-width: 600px;
     text-align: center;
     font-size: .8em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 45px;
-    /* overflow: hidden; */
+    margin-top: 70px;
 
     transition: .2s;
 }
+.about > h1{
+    font-size: 27px;
+    transition: .2s;
+}
+.about > p{
+    font-size: 16px;
+    transition: .2s;
+}
 .header_vid{
+    background-image: url("imagen/fondo-emergencia.png");
+    background-position: center;
     width: 100%;
     height: 400px;
     position: absolute;
@@ -113,7 +128,6 @@ header{
 }
 .vid_cont{
     position: relative;
-    filter: blur(.5em);
 }
 aside{
     display: flex;
@@ -123,44 +137,62 @@ aside{
     width: 90%;
     transition: .2s;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 70px;
     max-width: 1150px;
+    text-align: center;
 }
 aside >h1{
-    font-size: 20px;
+    font-size: 24px;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     transition: .2s;
 
     z-index: 1;
 }
+aside > p{
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.bold{
+    font-size: 1.1em;
+    font-weight: bold;
+}
 .race{
     width: 100%;
-    padding-top: 25%;
-    background-color: black;
+    padding-top: 26%;
+    background-color: #120f14;
     position: relative;
     overflow: hidden;
-    box-shadow: 0px 0px 100px black;
+    box-shadow: 0px 0px 100px #00000080;
     border-radius: 10px;
     transition: .2s;
 }
 .race:hover{
-    padding-top: 35%;
-    transform: scale(1.05);
+    padding-top: 37%;
+    width: 105%;
 }
 .capa{
     position: absolute;
     background-size: 100%;
     background-repeat: no-repeat;
 }
+.smb{
+    background-image: url("imagen/spacerace_smb.png");
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+}
 .ttl{
     background-image: url("imagen/spacerace_ttl.png");
-    width: 30%;
+    width: 25%;
     height: 70%;
-    top: 13%;
-    left: 25%;
-    animation: flotar_ttl 5s infinite ease-in-out alternate;
+    top: 5%;
+    left: 21%;
+    -webkit-animation: flotar_ttl 15s infinite ease-in-out alternate;
+    -moz-animation: flotar_ttl 15s infinite ease-in-out alternate;
+    animation: flotar_ttl 15s infinite ease-in-out alternate;
 }
 .estrellas{
     background-image: url("imagen/estrellas.png");
@@ -168,6 +200,8 @@ aside >h1{
     height: 100%;
     top: 0;
     left: 0;
+    -webkit-animation: flotar_estrellas 5s infinite ease-in-out alternate;
+    -moz-animation: flotar_estrellas 5s infinite ease-in-out alternate;
     animation: flotar_estrellas 5s infinite ease-in-out alternate;
 }
 .tierra{
@@ -176,14 +210,19 @@ aside >h1{
     height: 110%;
     top: -5%;
     left: -2.5%;
+    -webkit-animation: flotar_tierra 5s infinite ease-in-out alternate;
+    -moz-animation: flotar_tierra 5s infinite ease-in-out alternate;
     animation: flotar_tierra 5s infinite ease-in-out alternate;
 }
 .rus{
     background-image: url("imagen/race_2.png");
     width: 20%;
     height: 60%;
-    left: 15%;
-    top: 60%;
+    left: 25%;
+    top: 50%;
+    transform: rotate(10deg);
+    -webkit-animation: flotar_rus 10s infinite ease-in-out alternate;
+    -moz-animation: flotar_rus 10s infinite ease-in-out alternate;
     animation: flotar_rus 10s infinite ease-in-out alternate;
 
 }
@@ -194,12 +233,14 @@ aside >h1{
     top: 5%;
     right: -7%;
     transform: rotate(3deg);
+    -webkit-animation: flotar_luna 10s infinite ease-in-out alternate;
+    -moz-animation: flotar_luna 10s infinite ease-in-out alternate;
     animation: flotar_luna 10s infinite ease-in-out alternate;
 
 }
 @keyframes flotar_ttl{
-    0% {transform: translate(-6%,7%);}
-    100% {transform: translate(-10%,-6%);}
+    0% {transform: translate(5%,5%);}
+    100% {transform: translate(20%,15%);}
 }
 @keyframes flotar_estrellas{
     0% {transform: translate(0%,-1%);}
@@ -210,23 +251,23 @@ aside >h1{
     100% {transform: translate(-1%,-3%);}
 }
 @keyframes flotar_rus{
-    100% {transform: translate(40%,-15%);}
+    100% {transform: translate(-40%,20%);} 
 }
 @keyframes flotar_luna{
     0% {transform: rotate(-4deg);}
     100% {transform: translate(-7%,2%);} 
 }
 main >h1{
-    font-size: 22px;
+    font-size: 24px;
 
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     transition: .2s;
 }
 main{
     width: 100%;
-    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     
     display: flex;
     flex-direction: column;
@@ -358,6 +399,7 @@ main{
     align-items: center;
     justify-content: center;
     transition: .2s;
+
 }
 .comprar_activo{
     opacity: 1;
@@ -365,8 +407,8 @@ main{
     transition: .2s;
 }
 .comprar_noche:hover,.comprar_kraken:hover,.comprar_coloso:hover,.comprar_dorado:hover{
-    background-color: #e76464;
-    filter: drop-shadow(0 0 10px #e76464);
+    background-color: #e76464; filter: drop-shadow(0 0 10px #e76464);
+    transform: scale(1.1);
 }
 .itunes{
     width: 25px;
@@ -374,6 +416,24 @@ main{
     background-image: url("imagen/itunes.svg");
     background-repeat: no-repeat;
     filter: invert(1);
+}
+.efecto-btn-comprar{
+    background-color: #d5d4d800;
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px white;
+    position: absolute;
+    opacity: 0;
+    animation: pulse 2s infinite linear;
+}
+#btn-compra:hover .efecto-btn-comprar{
+    box-shadow: 0px 0px 10px #e76464;
+}
+@keyframes pulse {
+    0% {opacity: 0; transform: scale(0);}
+    80% {opacity: 1; transform: scale(1);}
+    100% {opacity: 0; transform: scale(1.5);}
 }
 footer{
     background-color: #37363b;
@@ -397,8 +457,8 @@ footer{
         height: 550px;
     }
     .logo{
-        width: 90px;
-        height: 90px;
+        width: 200px;
+        height: 100px;
     }
     .social{
         width: 200px;
@@ -409,20 +469,31 @@ footer{
         width: 25px;
         height: 25px;
     }
-    .about{
-        font-size: 1.2em;
-        margin-top: 70px;
+    .about >h1{
+        font-size: 35px;
+        margin-top: 30px;
+    }
+    .about >p{
+        font-size: 19px;
     }
     aside{
         padding-top: 30px;
     }
     aside > h1{
-        font-size: 24px;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    aside > p{
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+    main{
+        margin-top: 150px;
+        margin-bottom: 150px;
     }
     main > h1{
         font-size: 30px;
-        margin-top: 100px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     .av{
         height: 235px;
@@ -480,9 +551,15 @@ footer{
     }
 }
 @media screen and (min-width: 750px){
-    .about{
-        font-size: 1.4em;
-        margin-top: 70px;
+    .about >h1{
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .about >p{
+        font-size: 22px;
+    }
+    main >h1{
+        margin-bottom: 50px;
     }
     .cnt{
         max-width: 800px;
