@@ -49,8 +49,8 @@ header{
     backdrop-filter: blur(5px);
     border-radius: 0px 0px 50px 50px;
 
-    width: 150px;
-    height: 40px;
+    width: 120px;
+    height: 35px;
     padding: 0px 20px 0px 20px;
 
     display: flex;
@@ -67,9 +67,9 @@ header{
     border: 1px solid #B0AEB790;
     backdrop-filter: blur(5px);
     border-radius: 50px;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
     
     display: flex;
     justify-content: space-around;
@@ -83,8 +83,8 @@ header{
     cursor: pointer;
 }
 .ico{
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     filter: invert(1);
     background-repeat: no-repeat;
 }
@@ -461,13 +461,13 @@ footer{
         height: 100px;
     }
     .social{
-        width: 200px;
-        height: 50px;
+        width: 150px;
+        height: 40px;
         padding: 0px 20px 0px 20px;
     }
     .ico{
-        width: 25px;
-        height: 25px;
+        width: 22px;
+        height: 22px;
     }
     .about >h1{
         font-size: 35px;
