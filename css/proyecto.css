@@ -309,6 +309,7 @@ main{
     box-shadow: -10px 10px 10px rgba(65, 65, 65, 0.2), 10px -10px 10px rgba(255, 255, 255,.9);
     border-radius: 50px 150px 150px 50px;
     width: 35%;
+    min-width: 130px;
     position: relative;
 
     display: flex;
