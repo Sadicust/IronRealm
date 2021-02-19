@@ -37,7 +37,7 @@
     </div>
     <aside>
         <h1>Available Now</h1>
-        <p>My new album, SpaceRace, is out now.</p>
+        <p>My new album <span style="font-size: 1.05em;" >SpaceRace</span> is out now.</p>
         <a href="https://music.apple.com/ca/album/spacerace" target="blank" class="race">
             <div class="capa smb"></div>
             <div class="capa ttl"></div>
@@ -272,12 +272,14 @@
         addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('#nochefria')
 			if(car){car.addEventListener('click', () => {
+                const b =document.querySelector('#nochefria')
                 const vinyl = document.querySelector('.vinyl_noche')
                 const vinyl_light = document.querySelector('.vinyl_noche_light')
                 const lista = document.querySelector('.lista_noche')
                 const color = document.querySelector('.noche')
                 const pos = document.querySelector('.cara')
                 const compra = document.querySelector('.comprar_noche')
+                b.classList.toggle('b-activo')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
                 lista.classList.toggle('lista_activa')
@@ -290,12 +292,14 @@
         addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('#thebeast')
 			if(car){car.addEventListener('click', () => {
+                const b =document.querySelector('#thebeast')
                 const vinyl = document.querySelector('.vinyl_kraken')
                 const vinyl_light = document.querySelector('.vinyl_kraken_light')
                 const lista = document.querySelector('.lista_kraken')
                 const color = document.querySelector('.kraken')
                 const pos = document.querySelector('.cara')
                 const compra = document.querySelector('.comprar_kraken')
+                b.classList.toggle('b-activo')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
                 lista.classList.toggle('lista_activa')
@@ -308,11 +312,13 @@
         addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('#gargantuan')
 			if(car){car.addEventListener('click', () => {
+                const b =document.querySelector('#gargantuan')
                 const vinyl = document.querySelector('.vinyl_coloso')
                 const vinyl_light = document.querySelector('.vinyl_coloso_light')
                 const lista = document.querySelector('.lista_coloso')
                 const color = document.querySelector('.coloso')
                 const compra = document.querySelector('.comprar_coloso')
+                b.classList.toggle('b-activo')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
                 lista.classList.toggle('lista_activa')
@@ -324,11 +330,13 @@
         addEventListener('DOMContentLoaded', () => {
 			const car = document.querySelector('#eldorado')
 			if(car){car.addEventListener('click', () => {
+                const b =document.querySelector('#eldorado')
                 const vinyl = document.querySelector('.vinyl_dorado')
                 const vinyl_light = document.querySelector('.vinyl_dorado_light')
                 const lista = document.querySelector('.lista_dorado')
                 const color = document.querySelector('.dorado')
                 const compra = document.querySelector('.comprar_dorado')
+                b.classList.toggle('b-activo')
                 vinyl.classList.toggle('animacion_disco')
                 vinyl_light.classList.toggle('animacion_luz')
                 lista.classList.toggle('lista_activa')
