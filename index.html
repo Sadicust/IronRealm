@@ -6,16 +6,16 @@
     <link rel="stylesheet" href="css/proyecto.css">
     <link rel="stylesheet" href="css/splash.css">
     <link rel="stylesheet" href="css/dark.css">
-    <link rel="icon" href="css/imagen/logo_icon.png" type="image/png">
+    <link rel="icon" href="css/imagen/logo-icon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>IronRealm</title>
 </head>
 <body id="body">
     <div class="splash">
-		<div class="logo_splash"></div>
+		<div class="logo-splash"></div>
 	</div>
     <header>
-        <div class="head_logo_social">
+        <div class="head-logo-social">
             <a href="./index.html" class="logo"></a>
             <div class="btn btn-aud" onclick="mute()"><i class="fa fa-volume-up" aria-hidden="true" id="altavoz"></i></div>
             <div class="btn btn-dark"><i class="fa fa-moon-o" aria-hidden="true" id="dark"></i></div>
@@ -30,10 +30,10 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nisi tempora distinctio recusandae perferendis, officiis, vitae nulla vel adipisci error sequi alias sapiente repudiandae molestiae.</p>
         </div>
     </header>
-    <div class="header_vid">
-        <video autoplay loop muted class="vid_cont">
-            <source src="css/imagen/ironrealm_vid_mp4.mp4" type="video/mp4">
-            <source src="css/imagen/ironrealm_vid_webm.webm" type="video/webm">
+    <div class="header-vid">
+        <video autoplay loop muted>
+            <source src="css/imagen/ironrealm-vid-mp4.mp4" type="video/mp4">
+            <source src="css/imagen/ironrealm-vid-webm.webm" type="video/webm">
         </video>
         
     </div>
@@ -54,16 +54,16 @@
         <div class="cnt">
             <div id="nochefria" class="b" onclick="sky()">
                 <div class="cara">
-                    <img class="vinyl_noche" src="css/imagen/vinyl_noche.png">
-                    <img class="vinyl_noche_light" src="css/imagen/vinyl_light.png">
+                    <span class="vinyl-noche-span"><img class="vinyl-noche" src="css/imagen/vinyl-noche.png"></span>
+                    <img class="vinyl-noche-light" src="css/imagen/vinyl-light.png">
                     <div class="noche">
-                        <audio id="audio_sky" >
+                        <audio id="audio-sky" >
                             <source src="css/sonido/anxiety.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
                 <div class="ttl-album ttl-noche">Noche Fria</div>
-                <div class="lista_noche lista">
+                <div class="lista-noche lista">
                     <h1>Noche Fria</h1>
                     <h5>IronRealm - 2018</h5>
                     <br>
@@ -75,23 +75,23 @@
                         <li>Here</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/nochefria" target="blank" id="btn-compra" class="comprar_noche" title="Itunes - Noche Fria" >
+                <a href="https://music.apple.com/ca/album/nochefria" target="blank" id="btn-compra" class="comprar-noche" title="Itunes - Noche Fria" >
                     <div class="itunes"></div>
                     <div class="efecto-btn-comprar"></div>
                 </a>
             </div>
-            <div id="thebeast" class="b dark" onclick="lurking()">
+            <div id="thebeast" class="b" onclick="lurking()">
                 <div class="cara">
-                    <img class="vinyl_kraken" src="css/imagen/vinyl_kraken.png">
-                    <img class="vinyl_kraken_light" src="css/imagen/vinyl_light.png">
+                    <span class="vinyl-kraken-span"><img class="vinyl-kraken" src="css/imagen/vinyl-kraken.png"></span>
+                    <img class="vinyl-kraken-light" src="css/imagen/vinyl-light.png">
                     <div class="kraken">
-                        <audio id="audio_lurking">
+                        <audio id="audio-lurking">
                             <source src="css/sonido/lurking.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
                 <div class="ttl-album ttl-kraken">The Beast</div>
-                <div class="lista_kraken lista">
+                <div class="lista-kraken lista">
                     <h1>The Beast</h1>
                     <h5>IronRealm - 2016</h5>
                     <br>
@@ -103,23 +103,23 @@
                         <li>The Remains</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/thebeast" target="blank" id="btn-compra" class="comprar_kraken" title="Itunes - The Beast" >
+                <a href="https://music.apple.com/ca/album/thebeast" target="blank" id="btn-compra" class="comprar-kraken" title="Itunes - The Beast" >
                     <div class="itunes"></div>
                     <div class="efecto-btn-comprar"></div>
                 </a>
             </div>
             <div id="gargantuan" class="b" onclick="watching()">
                 <div class="cara">
-                    <img class="vinyl_coloso" src="css/imagen/vinyl_coloso.png">
-                    <img class="vinyl_coloso_light" src="css/imagen/vinyl_light.png">
+                    <span class="vinyl-coloso-span"><img class="vinyl-coloso" src="css/imagen/vinyl-coloso.png"></span>
+                    <img class="vinyl-coloso-light" src="css/imagen/vinyl-light.png">
                     <div class="coloso">
-                        <audio id="audio_watching" >
+                        <audio id="audio-watching" >
                             <source src="css/sonido/simple-life.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
                 <div class="ttl-album ttl-coloso">Gargantuan</div>
-                <div class="lista_coloso lista">
+                <div class="lista-coloso lista">
                     <h1>Gargantuan</h1>
                     <h5>IronRealm - 2014</h5>
                     <br>
@@ -131,23 +131,23 @@
                         <li>Eternal Dream</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/gargantuan" target="blank" id="btn-compra" class="comprar_coloso" title="Itunes - Gargantuan">
+                <a href="https://music.apple.com/ca/album/gargantuan" target="blank" id="btn-compra" class="comprar-coloso" title="Itunes - Gargantuan">
                     <div class="itunes"></div>
                     <div class="efecto-btn-comprar"></div>
                 </a>
             </div>
             <div id="eldorado" class="b" onclick="discover()">
                 <div class="cara">
-                    <img class="vinyl_dorado" src="css/imagen/vinyl_dorado.png">
-                    <img class="vinyl_dorado_light" src="css/imagen/vinyl_light.png">
+                    <span class="vinyl-dorado-span"><img class="vinyl-dorado" src="css/imagen/vinyl-dorado.png"></span>
+                    <img class="vinyl-dorado-light" src="css/imagen/vinyl-light.png">
                     <div class="dorado">
-                        <audio id="audio_discover" >
+                        <audio id="audio-discover" >
                             <source src="css/sonido/simple-life.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
                 <div class="ttl-album ttl-dorado">El Dorado</div>
-                <div class="lista_dorado lista">
+                <div class="lista-dorado lista">
                     <h1>El Dorado</h1>
                     <h5>IronRealm - 2012</h5>
                     <br>
@@ -159,7 +159,7 @@
                         <li>Curse</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/ca/album/eldorado" target="blank" id="btn-compra" class="comprar_dorado" title="Itunes - El Dorado" >
+                <a href="https://music.apple.com/ca/album/eldorado" target="blank" id="btn-compra" class="comprar-dorado" title="Itunes - El Dorado" >
                     <div class="itunes"></div>
                     <div class="efecto-btn-comprar"></div>
                 </a>
