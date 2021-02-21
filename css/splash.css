@@ -1,1 +1,37 @@
-.splash{background-color:#27262a;width:100%;height:100%;transform:scale(0);position:fixed;display:flex;justify-content:center;align-items:center;pointer-events:none;-webkit-animation:splash 2s;-moz-animation:splash 2s;animation:splash 2s;z-index:3;overflow:hidden}.logo-splash{width:250px;height:250px;background-image:url(imagen/isotipo.svg);background-repeat:no-repeat;background-position:center;background-size:contain;text-align:center;animation:rotar 1s;opacity:0}@keyframes splash{0%{transform:scale(1);opacity:100%}25%{transform:scale(1);opacity:100%}100%{transform:scale(1);opacity:0}}@keyframes rotar{from{transform:rotate(0);filter:blur(2px);opacity:1}to{transform:rotate(360deg);opacity:0}}
+.splash{
+	background-color: #27262a;
+	width: 100%;
+	height: 100%;
+	transform: scale(0);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	-webkit-animation: splash 2s;
+	-moz-animation: splash 2s;
+	animation: splash 2s;
+	z-index: 3;
+	overflow: hidden;
+	
+}
+.logo-splash{
+	width: 250px;
+	height: 250px;
+	background-image: url("imagen/isotipo.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	text-align: center;
+	animation: rotar 1s;
+	opacity: 0;
+}
+@keyframes splash{
+	0% {transform:scale(1); opacity: 100%}
+	25% {transform:scale(1); opacity: 100%}
+	100% {transform:scale(1); opacity: 0%}
+}
+@keyframes rotar {
+    from {transform: rotate(0deg);filter: blur(2px); opacity: 1;}
+    to {transform: rotate(360deg);opacity: 0;} 
+}
