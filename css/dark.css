@@ -19,12 +19,8 @@ body.dark-theme .b{
     transition: .5s;
 }
 body.dark-theme .ttl-album{
-    text-shadow: -2px 2px 3px rgba(255,255,255,0.07);
-    color: rgba(13, 11, 15, 0.7);
-    background: #27262A;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
+    color: #ccc;
+    transition: .5s;
 }
 body.dark-theme .b:hover .ttl-album{
     color: #fff;

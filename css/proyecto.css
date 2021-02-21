@@ -298,12 +298,7 @@ main{
     width: 100%;
 }
 .ttl-album{
-    background: #666666;
-    color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    color: #666666;
     font-size: 30px;
     width: 160px;
     right: 10%;
