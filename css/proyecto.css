@@ -139,11 +139,6 @@ aside > p{
     border-radius: 10px;
     transition: .5s;
 }
-.race:hover{
-    box-shadow: -25px 25px 15px rgba(0, 0, 0, 0.25);
-    padding-top: 37%;
-    width: 105%;
-}
 .capa{
     position: absolute;
     background-size: 100%;
@@ -447,37 +442,12 @@ footer>div>p{
         -moz-background-clip: text;
         background-clip: text;
     }
-    .race{
-        width: 100%;
-        padding-top: 26%;
-        background-color: #120f14;
-        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5), 10px -10px 15px rgba(255, 255, 255, 0.07);
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        transition: .5s;
-    }
     .race:hover{
         box-shadow: -25px 25px 15px rgba(0, 0, 0, 0.25);
         padding-top: 37%;
         width: 105%;
     }
-    .capa{
-        position: absolute;
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
-    .smb{
-        background-image: url("imagen/spacerace-smb.png");
-        width: 100%;
-        height: 100%;
-        top: 0;
-        z-index: 1;
-    }
     .ttl{
-        background-image: url("imagen/spacerace-ttl.png");
-        width: 25%;
-        height: 70%;
         top: 5%;
         left: 21%;
         -webkit-animation: flotar-ttl 15s infinite ease-in-out alternate;
@@ -485,21 +455,11 @@ footer>div>p{
         animation: flotar-ttl 15s infinite ease-in-out alternate;
     }
     .estrellas{
-        background-image: url("imagen/estrellas.png");
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
         -webkit-animation: flotar-estrellas 5s infinite ease-in-out alternate;
         -moz-animation: flotar-estrellas 5s infinite ease-in-out alternate;
         animation: flotar-estrellas 5s infinite ease-in-out alternate;
     }
     .tierra{
-        background-image: url("imagen/race-1.png");
-        width: 25%;
-        height: 110%;
-        top: -5%;
-        left: -2.5%;
         -webkit-animation: flotar-tierra 5s infinite ease-in-out alternate;
         -moz-animation: flotar-tierra 5s infinite ease-in-out alternate;
         animation: flotar-tierra 5s infinite ease-in-out alternate;
@@ -518,11 +478,6 @@ footer>div>p{
     }
     .luna{
         background-image: url("imagen/race-3.png");
-        width: 50%;
-        height: 100%;
-        top: 5%;
-        right: -7%;
-        transform: rotate(3deg);
         -webkit-animation: flotar-luna 10s infinite ease-in-out alternate;
         -moz-animation: flotar-luna 10s infinite ease-in-out alternate;
         animation: flotar-luna 10s infinite ease-in-out alternate;
