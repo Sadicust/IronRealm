@@ -118,7 +118,7 @@
                 const vinyl_light = document.querySelector('.vinyl-noche-light');
                 const lista = document.querySelector('.lista-noche');
                 const color = document.querySelector('.noche');
-                const compra = document.querySelector('.comprar-noche');
+                const compra = document.querySelector('.ver-noche');
                 const ttlnoche = document.querySelector('.ttl-noche');
                 b.classList.toggle('b-activo');
                 vinyl.classList.toggle('animacion-disco');
@@ -126,7 +126,7 @@
                 vinyl_light.classList.toggle('movimiento-disco');
                 lista.classList.toggle('lista-activa');
                 color.classList.toggle('color');
-                compra.classList.toggle('comprar-activo');
+                compra.classList.toggle('ver-activo');
                 ttlnoche.classList.toggle('ttl-activo');
                 })
 			}
@@ -140,7 +140,7 @@
                 const vinyl_light = document.querySelector('.vinyl-kraken-light');
                 const lista = document.querySelector('.lista-kraken');
                 const color = document.querySelector('.kraken');
-                const compra = document.querySelector('.comprar-kraken');
+                const compra = document.querySelector('.ver-kraken');
                 const ttlkraken = document.querySelector('.ttl-kraken');
                 b.classList.toggle('b-activo');
                 vinyl.classList.toggle('animacion-disco');
@@ -148,7 +148,7 @@
                 vinyl_light.classList.toggle('movimiento-disco');
                 lista.classList.toggle('lista-activa');
                 color.classList.toggle('color');
-                compra.classList.toggle('comprar-activo');
+                compra.classList.toggle('ver-activo');
                 ttlkraken.classList.toggle('ttl-activo');
                 })
 			}
@@ -162,7 +162,7 @@
                 const vinyl_light = document.querySelector('.vinyl-coloso-light')
                 const lista = document.querySelector('.lista-coloso')
                 const color = document.querySelector('.coloso')
-                const compra = document.querySelector('.comprar-coloso')
+                const compra = document.querySelector('.ver-coloso')
                 const ttlcoloso = document.querySelector('.ttl-coloso')
                 b.classList.toggle('b-activo')
                 vinyl.classList.toggle('animacion-disco')
@@ -170,7 +170,7 @@
                 vinyl_light.classList.toggle('movimiento-disco')
                 lista.classList.toggle('lista-activa')
                 color.classList.toggle('color')
-                compra.classList.toggle('comprar-activo')
+                compra.classList.toggle('ver-activo')
                 ttlcoloso.classList.toggle('ttl-activo')
                 })
 			}
@@ -184,7 +184,7 @@
                 const vinyl_light = document.querySelector('.vinyl-dorado-light')
                 const lista = document.querySelector('.lista-dorado')
                 const color = document.querySelector('.dorado')
-                const compra = document.querySelector('.comprar-dorado')
+                const compra = document.querySelector('.ver-dorado')
                 const ttldorado = document.querySelector('.ttl-dorado')
                 b.classList.toggle('b-activo')
                 vinyl.classList.toggle('animacion-disco')
@@ -192,7 +192,7 @@
                 vinyl_light.classList.toggle('movimiento-disco')
                 lista.classList.toggle('lista-activa')
                 color.classList.toggle('color')
-                compra.classList.toggle('comprar-activo')
+                compra.classList.toggle('ver-activo')
                 ttldorado.classList.toggle('ttl-activo')
                 })
 			}

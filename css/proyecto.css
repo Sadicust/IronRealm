@@ -266,7 +266,7 @@ main{
 	align-items: center;
 	justify-content: flex-start;
 	background-repeat: no-repeat;
-    /* transition: .5s; */
+    transition: .5s;
 }
 .color{
     filter: grayscale(0);
@@ -334,13 +334,20 @@ main{
     list-style-type: none;
     transition: opacity .5s;
 }
-.comprar-noche,.comprar-kraken,.comprar-coloso,.comprar-dorado{
+.canc-activa{
+    animation: cambio-color-l 1.5s infinite alternate;
+}
+@keyframes cambio-color-l{
+    0% {color: #2c9b6d}
+    100% {color: #42e6a2}
+}
+.ver-noche,.ver-kraken,.ver-coloso,.ver-dorado{
     background-color: #2c9b6d;
     opacity: 0;
     position: absolute;
     width: 30px;
     height: 30px;
-    right: 15px;
+    right: -100vw;
     border-radius: 150px;
     display: flex;
     align-items: center;
@@ -348,31 +355,34 @@ main{
     transition: transform .5s, opacity .5s;
 
 }
-.comprar-activo{
+.ver-activo{
+    right: 15px;
     opacity: 1;
     transition: transform .5s, opacity .5s;
 }
-.comprar-noche:hover,.comprar-kraken:hover,.comprar-coloso:hover,.comprar-dorado:hover{
+.ver-noche:hover,.ver-kraken:hover,.ver-coloso:hover,.ver-dorado:hover{
     background-color: #42e6a2; filter: drop-shadow(0 0 10px #42e6a2);
 }
-.itunes{
-    width: 20px;
-    height: 20px;
-    background-image: url("imagen/itunes.svg");
+.ver{
+    width: 100%;
+    height: 100%;
+    background-image: url("imagen/ver.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
     filter: invert(1);
 }
-.efecto-btn-comprar{
+.efecto-btn-ver{
     background-color: transparent;
     width: 30px;
     height: 30px;
     border-radius: 25px;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px #2c9b6d;
     position: absolute;
     opacity: 0;
     animation: pulse 2s infinite linear;
 }
-#btn-compra:hover .efecto-btn-comprar{
+#btn-compra:hover .efecto-btn-ver{
     box-shadow: 0px 0px 10px #42e6a2;
 }
 @keyframes pulse {
@@ -570,19 +580,15 @@ footer>div>p{
     .lista-noche>h1,.lista-kraken>h1,.lista-coloso>h1,.lista-dorado>h1{
         font-size: 20px;
     }
-    .comprar-noche,.comprar-kraken,.comprar-coloso,.comprar-dorado{
+    .ver-noche,.ver-kraken,.ver-coloso,.ver-dorado{
         right: -50px;
         width: 40px;
         height: 40px;
     }
-    .comprar-activo{
+    .ver-activo{
         transform: translate(-90px);
     }
-    .itunes{
-        width: 30px;
-        height: 30px;
-    }
-    .efecto-btn-comprar{
+    .efecto-btn-ver{
         width: 35px;
         height: 35px;
     }
@@ -637,7 +643,7 @@ footer>div>p{
         font-size: 24px;
         margin-left: 15px;
     }
-    .comprar-activo{
+    .ver-activo{
         transform: translate(-110px);
     }
 }
