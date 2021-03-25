@@ -305,7 +305,7 @@ main{
 }
 @keyframes giro {
     0% {transform: rotate(-135deg)} 
-    100% {transform: rotate(2880deg)} 
+    100% {transform: rotate(2520deg)} 
 }
 .lista-noche,.lista-kraken,.lista-coloso,.lista-dorado{
     font-size: .8em;

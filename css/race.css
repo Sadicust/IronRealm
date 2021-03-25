@@ -8,8 +8,9 @@
 }
 html,body{
 	height: 100%;
-    min-height: 900px;
+    min-height: 600px;
     background-color: #120f14;
+    transition: .2s;
 }
 .logo{
     background-image: url("imagen/isotipo.svg");
@@ -41,7 +42,6 @@ main{
     background-size: contain;
     width: 100%;
     height: 100%;
-    animation: mov 10s infinite alternate;
 }
 .tierra{
     background-image: url("imagen/spacerace-tierra.png");
@@ -71,10 +71,10 @@ main{
     background-position: bottom right;
     width: 70%;
     height: 70%;
-    max-width: 835px;
-    max-height: 895px;
+    max-width: 335px;
+    max-height: 395px;
     right: -110px;
-    bottom: 50px;
+    bottom: 30px;
     transform: rotate(5deg);
     transition: .2s;
 }
@@ -100,11 +100,42 @@ main{
     transition: .2s;
     z-index: 1;
 }
-@keyframes mov{
-    0% {transform: translate(-10px);}
-    100% {transform: translate(10px);}
+.vinyl-cnt{
+    width: 100px;
+    height: 100px;
+    left: 20px;
+    bottom: 20px;
+    position: fixed;
+    overflow: hidden;
+    transition: .2s;
+}
+.vinyl-light{
+    background-image: url("imagen/vinyl-light-alt.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.vinyl{
+    background-image: url("imagen/vinyl-race.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: girar 2.2s infinite linear;
+}
+@keyframes girar{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }
 @media screen and (min-width: 700px){
+    html,body{
+        min-height: 950px;
+    }
     .ttl{
         width: 260px;
         height: 220px;
@@ -113,8 +144,14 @@ main{
         height: 70px;
     }
     .luna{
-        bottom: -50px;
+        max-width: 525px;
+        max-height: 605px;
+        bottom: 30px;
         transform: rotate(0deg);
+    }
+    .vinyl-cnt{
+        width: 120px;
+        height: 120px;
     }
 }
 @media screen and (min-width: 800px){
@@ -127,6 +164,8 @@ main{
         transform: rotate(45deg);
     }
     .luna{
+        max-width: 725px;
+        max-height: 805px;
         bottom: -80px;
         right: -150px;
         transform: rotate(0deg);
@@ -141,9 +180,13 @@ main{
         transform: rotate(10deg);
     }
     .luna{
-        bottom: -20px;
+        bottom: 0px;
         right: -200px;
         transform: rotate(-10deg);
+    }
+    .vinyl-cnt{
+        width: 150px;
+        height: 150px;
     }
 }
 @media screen and (min-width: 1500px){
