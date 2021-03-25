@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Corbel';
+    user-select: none;
+    outline: none;
+    overflow-x: hidden;
+}
+html,body{
+	height: 100%;
+    min-height: 900px;
+    background-color: #120f14;
+}
+.logo{
+    background-image: url("imagen/isotipo.svg");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+    transition: .2s;
+}
+main{
+    width: 100%;
+    height: 100%;
+}
+.race{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.capa{
+    position: absolute;
+}
+.estrellas{
+    background-image: url("imagen/spacerace-estrellas.png");
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    animation: mov 10s infinite alternate;
+}
+.tierra{
+    background-image: url("imagen/spacerace-tierra.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30%;
+    height: 60%;
+    max-width: 350px;
+    max-height: 710px;
+    transition: .2s;
+}
+.rus{
+    background-image: url("imagen/spacerace-rus.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25%;
+    height: 20%;
+    left: 7%;
+    top: 40%;
+    transform: rotate(50deg);
+    transition: .2s;
+}
+.luna{
+    background-image: url("imagen/spacerace-luna.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    width: 70%;
+    height: 70%;
+    max-width: 835px;
+    max-height: 895px;
+    right: -110px;
+    bottom: 50px;
+    transform: rotate(5deg);
+    transition: .2s;
+}
+.ttl{
+    background-image: url("imagen/spacerace-ttl.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 130px;
+    margin: 120px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: .2s;
+}
+.buy{
+    background-image: url("imagen/spacerace-buy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 40px;
+    transition: .2s;
+    z-index: 1;
+}
+@keyframes mov{
+    0% {transform: translate(-10px);}
+    100% {transform: translate(10px);}
+}
+@media screen and (min-width: 700px){
+    .ttl{
+        width: 260px;
+        height: 220px;
+    }
+    .buy{
+        height: 70px;
+    }
+    .luna{
+        bottom: -50px;
+        transform: rotate(0deg);
+    }
+}
+@media screen and (min-width: 800px){
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+    .rus{
+        left: 15%;
+        transform: rotate(45deg);
+    }
+    .luna{
+        bottom: -80px;
+        right: -150px;
+        transform: rotate(0deg);
+    }
+}
+@media screen and (min-width: 1000px){
+    .rus{
+        width: 35%;
+        height: 30%;
+        left: 13%;
+        top: 40%;
+        transform: rotate(10deg);
+    }
+    .luna{
+        bottom: -20px;
+        right: -200px;
+        transform: rotate(-10deg);
+    }
+}
+@media screen and (min-width: 1500px){
+    .ttl{
+        width: 360px;
+        height: 300px;
+        margin: 360px auto 0;
+    }
+    .buy{
+        height: 100px;
+    }
+}

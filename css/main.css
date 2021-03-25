@@ -50,6 +50,11 @@ header{
     right: 60px;
     z-index: 2;
 }
+.hl{
+    width: 1px;
+    height: 20px;
+    background-color: #B0AEB790;
+}
 .btn{
     background-color: #55535a50;
     border: 1px solid #B0AEB790;
@@ -159,21 +164,21 @@ aside > p{
     left: 29%;
 }
 .estrellas{
-    background-image: url("imagen/estrellas.png");
+    background-image: url("imagen/spacerace-estrellas.png");
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
 }
 .tierra{
-    background-image: url("imagen/race-1.png");
+    background-image: url("imagen/spacerace-tierra.png");
     width: 25%;
     height: 110%;
     top: -5%;
     left: -2.5%;
 }
 .rus{
-    background-image: url("imagen/race-2.png");
+    background-image: url("imagen/spacerace-rus.png");
     width: 20%;
     height: 60%;
     left: 15%;
@@ -181,7 +186,7 @@ aside > p{
     transform: rotate(10deg);
 }
 .luna{
-    background-image: url("imagen/race-3.png");
+    background-image: url("imagen/spacerace-luna.png");
     width: 50%;
     height: 100%;
     top: 5%;
@@ -292,7 +297,7 @@ main{
 }
 .animacion-disco{
     opacity: 1;
-	animation: giro 13.5s ease-out;
+	animation: giro 15s ease-out;
 }
 .movimiento-disco{
     opacity: 1;
@@ -300,7 +305,7 @@ main{
 }
 @keyframes giro {
     0% {transform: rotate(-135deg)} 
-    100% {transform: rotate(1800deg)} 
+    100% {transform: rotate(2880deg)} 
 }
 .lista-noche,.lista-kraken,.lista-coloso,.lista-dorado{
     font-size: .8em;
@@ -338,7 +343,6 @@ main{
     animation: cambio-color-l 1.5s infinite alternate;
 }
 @keyframes cambio-color-l{
-    0% {color: #2c9b6d}
     100% {color: #42e6a2}
 }
 .ver-noche,.ver-kraken,.ver-coloso,.ver-dorado{
@@ -475,19 +479,14 @@ footer>div>p{
         animation: flotar-tierra 5s infinite ease-in-out alternate;
     }
     .rus{
-        background-image: url("imagen/race-2.png");
-        width: 20%;
-        height: 60%;
         left: 25%;
         top: 50%;
-        transform: rotate(10deg);
         -webkit-animation: flotar-rus 10s infinite ease-in-out alternate;
         -moz-animation: flotar-rus 10s infinite ease-in-out alternate;
         animation: flotar-rus 10s infinite ease-in-out alternate;
     
     }
     .luna{
-        background-image: url("imagen/race-3.png");
         -webkit-animation: flotar-luna 10s infinite ease-in-out alternate;
         -moz-animation: flotar-luna 10s infinite ease-in-out alternate;
         animation: flotar-luna 10s infinite ease-in-out alternate;
@@ -545,6 +544,9 @@ footer>div>p{
         width: 210px;
         margin-left: 25px;
         transition: transform .5s, opacity .5s;
+    }
+    .b:hover .ttl-album{
+        animation: cambio-color-l 1.5s infinite alternate;
     }
     .ttl-activo{
         transform: translate(50px);
