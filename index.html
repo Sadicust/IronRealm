@@ -14,11 +14,11 @@
     <div class="splash">
 		<div class="logo-splash"></div>
 	</div>
-    <header class="header-home">
+    <header>
         <div class="head-logo-social">
-            <a href="./index.html" class="logo logo-home"></a>
+            <a href="./index.html" class="logo"></a>
             <div class="btn btn-aud" onclick="mute()"><i class="fa fa-volume-up" aria-hidden="true" id="altavoz"></i></div>
-            <div class="btn btn-dark btn-dark-home"><i class="fa fa-moon-o" aria-hidden="true" id="dark"></i></div>
+            <div class="btn btn-dark"><i class="fa fa-moon-o" aria-hidden="true" id="dark"></i></div>
             <div class="social">
                 <a href="https://www.youtube.com/channel/UCNaCwkY7ELUnhadMF8vkOMA/featured" target="blank" class="ico yt"></a>
                 <div class="hl"></div>
@@ -33,16 +33,17 @@
         </div>
     </header>
     <div class="header-vid">
-        <video class="header-cnt-vid" autoplay loop muted playsinline poster="css/imagen/fondo-emergencia.png">
+        <img class="cnt-img" src="css/imagen/ironrealm-fondo.png" alt="">
+        <video class="cnt-vid" autoplay loop muted playsinline poster="css/imagen/fondo-emergencia.png">
             <source src="css/imagen/ironrealm-vid-webm.webm" type="video/webm; codec=vp9">
             <source src="css/imagen/ironrealm-vid-mp4.mp4" type="video/mp4; codec=h264">
         </video>
         
     </div>
-    <aside class="aside-race">
+    <aside>
         <h1>Available Now</h1>
         <p>My new album <span style="font-size: 1.05em; font-style: italic;">&ensp;SpaceRace&ensp;</span> is out now.</p>
-        <a href="https://music.apple.com/us/album/spacerace" target="blank" class="race">
+        <a href="race.html" class="race">
             <div class="capa smb"></div>
             <div class="capa ttl"></div>
             <div class="capa estrellas"></div>
@@ -51,7 +52,7 @@
             <div class="capa luna"></div>
         </a>
     </aside>
-    <main class="main-home">
+    <main>
         <h1 class="ttl-main">Released Albums</h1>
         <div class="cnt">
             <div id="nochefria" class="b" onclick="sky()">
@@ -60,8 +61,7 @@
                     <img class="vinyl-noche-light" src="css/imagen/vinyl-light.png">
                     <div class="noche">
                         <audio id="audio-sky" >
-                            <source src="css/sonido/anxiety.ogg" type="audio/ogg">
-                            <source src="css/sonido/anxiety.mp3" type="audio/mp3">
+                            <source src="css/sonido/anxiety.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
@@ -78,9 +78,9 @@
                         <li>Here</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/us/album/nochefria" target="blank" id="btn-compra" class="comprar-noche" title="comprar - Noche Fria" >
-                    <div class="comprar"></div>
-                    <div class="efecto-btn-comprar"></div>
+                <a href="nochefria.html" id="btn-compra" class="ver-noche" title="ver - Noche Fria" >
+                    <div class="ver"></div>
+                    <div class="efecto-btn-ver"></div>
                 </a>
             </div>
             <div id="thebeast" class="b" onclick="lurking()">
@@ -89,8 +89,7 @@
                     <img class="vinyl-kraken-light" src="css/imagen/vinyl-light.png">
                     <div class="kraken">
                         <audio id="audio-lurking">
-                            <source src="css/sonido/lurking.ogg" type="audio/ogg">
-                            <source src="css/sonido/lurking.mp3" type="audio/mp3">
+                            <source src="css/sonido/lurking.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
@@ -107,9 +106,9 @@
                         <li>The Remains</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/us/album/thebeast" target="blank" id="btn-compra" class="comprar-kraken" title="comprar - The Beast" >
-                    <div class="comprar"></div>
-                    <div class="efecto-btn-comprar"></div>
+                <a href="thebeast.html" id="btn-compra" class="ver-kraken" title="ver - The Beast" >
+                    <div class="ver"></div>
+                    <div class="efecto-btn-ver"></div>
                 </a>
             </div>
             <div id="gargantuan" class="b" onclick="watching()">
@@ -118,8 +117,7 @@
                     <img class="vinyl-coloso-light" src="css/imagen/vinyl-light.png">
                     <div class="coloso">
                         <audio id="audio-watching" >
-                            <source src="css/sonido/simple-life.ogg" type="audio/ogg">
-                            <source src="css/sonido/simple-life.mp3" type="audio/mp3">
+                            <source src="css/sonido/simple-life.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
@@ -136,9 +134,9 @@
                         <li>Eternal Dream</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/us/album/gargantuan" target="blank" id="btn-compra" class="comprar-coloso" title="comprar - Gargantuan">
-                    <div class="comprar"></div>
-                    <div class="efecto-btn-comprar"></div>
+                <a href="gargantuan.html" id="btn-compra" class="ver-coloso" title="ver - Gargantuan">
+                    <div class="ver"></div>
+                    <div class="efecto-btn-ver"></div>
                 </a>
             </div>
             <div id="eldorado" class="b" onclick="discover()">
@@ -147,8 +145,7 @@
                     <img class="vinyl-dorado-light" src="css/imagen/vinyl-light.png">
                     <div class="dorado">
                         <audio id="audio-discover" >
-                            <source src="css/sonido/wild-green.ogg" type="audio/ogg">
-                            <source src="css/sonido/wild-green.mp3" type="audio/mp3">
+                            <source src="css/sonido/wild-green.wav" type="audio/wav">
                         </audio>
                     </div>
                 </div>
@@ -165,32 +162,13 @@
                         <li>Curse</li>
                     </ol>
                 </div>
-                <a href="https://music.apple.com/us/album/eldorado" target="blank" id="btn-comprar" class="comprar-dorado" title="comprar - El Dorado" >
-                    <div class="comprar"></div>
-                    <div class="efecto-btn-comprar"></div>
+                <a href="eldorado.html" id="btn-ver" class="ver-dorado" title="ver - El Dorado" >
+                    <div class="ver"></div>
+                    <div class="efecto-btn-ver"></div>
                 </a>
             </div>
         </div>
     </main>
-    <div class="coming">
-        <h1>Coming Soon</h1>
-        <img class="vinyl-ink" src="css/imagen/vinyl-ink.png">
-        <img class="vinyl-ink-light" src="css/imagen/vinyl-light-alt.png">
-    </div>
-    <div class="email">
-        <h1>Sign Up for <span style="font-style: italic;">NEWS</span></h1>
-        <div class="inp-cnt">
-            <input class="inp-email" type="text" placeholder="Enter your email address">
-            <button class="btn-email">Send</button>
-        </div>
-    </div>
-    <div class="videos">
-        <div class="cnt-videos">
-            <div class="cnt-videos-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/9j_6GkExoM0" allowfullscreen="allowfullscreen"></iframe></div>
-            <div class="cnt-videos-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/9j_6GkExoM0" allowfullscreen="allowfullscreen"></iframe></div>
-            <div class="cnt-videos-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/9j_6GkExoM0" allowfullscreen="allowfullscreen"></iframe></div>
-        </div>
-    </div>
     <footer>
         <div><p>IronRealm ©</p></div>
     </footer>
