@@ -2,13 +2,20 @@ body.dark-theme{
     background-color: #27262a;
 }
 body.dark-theme header{
-    box-shadow: 0px 50px 30px rgba(68, 67, 77, 0.3);
+    box-shadow: none;
 }
-body.dark-theme aside{
+body.dark-theme .aside-race,body.dark-theme .ttl-main,body.dark-theme .coming,body.dark-theme .email,body.dark-theme .inp-email{
     color: #ccc;
 }
-body.dark-theme .ttl-main{
-    color: #ccc;
+body.dark-theme .inp-email:focus{
+    color: white;
+    border-bottom: 1px solid #ccc;
+}
+body.dark-theme .btn-email{
+    background-color: #a74949c9;
+}
+body.dark-theme .btn-email:hover{
+    background-color: #e76464;
 }
 body.dark-theme .b{
     background-color: #27262a;
@@ -17,15 +24,7 @@ body.dark-theme .b{
 body.dark-theme .ttl-album{
     color: #ccc;
 }
-body.dark-theme .lista h1{
-    color: #ccc;
-    text-shadow: none;
-}
-body.dark-theme .lista h5{
-    color: #ccc;
-    text-shadow: none;
-}
-body.dark-theme .lista ol{
+body.dark-theme .lista h1,body.dark-theme .lista h5,body.dark-theme .lista ol{
     color: #ccc;
     text-shadow: none;
 }
@@ -36,16 +35,16 @@ body.dark-theme .canc-activa{
     0% {color: #a74949c9}
     100% {color: #e76464}
 }
-body.dark-theme .efecto-btn-ver{
+body.dark-theme .efecto-btn-comprar{
     box-shadow: 0px 0px 10px #a74949c9;
 }
-body.dark-theme .ver-noche,body.dark-theme .ver-kraken,body.dark-theme .ver-coloso,body.dark-theme .ver-dorado{
+body.dark-theme .comprar-noche,body.dark-theme .comprar-kraken,body.dark-theme .comprar-coloso,body.dark-theme .comprar-dorado{
     background-color: #a74949c9;
 }
-body.dark-theme .ver-noche:hover, body.dark-theme .ver-kraken:hover,body.dark-theme .ver-coloso:hover,body.dark-theme .ver-dorado:hover{
+body.dark-theme .comprar-noche:hover, body.dark-theme .comprar-kraken:hover,body.dark-theme .comprar-coloso:hover,body.dark-theme .comprar-dorado:hover{
     background-color: #e76464; filter: drop-shadow(0 0 10px #e76464);
 }
-body.dark-theme #btn-compra:hover .efecto-btn-ver{
+body.dark-theme #btn-comprar:hover .efecto-btn-comprar{
     box-shadow: 0px 0px 10px #e76464;
 }
 body.dark-theme footer div{
@@ -55,10 +54,10 @@ body.dark-theme footer div p{
     color: #ccc;
 }
 @media screen and (min-width: 600px){
-    body.dark-theme aside h1{
+    body.dark-theme .aside-race h1{
         text-shadow: none;
     }
-    body.dark-theme aside p{
+    body.dark-theme .aside-race p{
         text-shadow: none;
     }
     body.dark-theme .ttl-main{

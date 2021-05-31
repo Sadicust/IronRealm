@@ -1,0 +1,98 @@
+html,body{
+    height: 100%;
+    min-height: 740px;
+}
+.header-album{
+    color: white;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-album{
+    background-image: url("imagen/isotipo.svg");
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+    margin: 10px 0 0 10px;
+}
+.btn-dark-album{
+    top: 10px;
+}
+.main-album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.album-int{
+    display: flex;
+    flex-direction: column;
+}
+.album-int-info,.album-int-vid{
+    width: 330px;
+    height: 330px;
+    background-size: cover;
+}
+.album-int-info{
+    background-image: url("imagen/Album-interior1.jpg");
+    border-radius: 5px 5px 2px 2px;
+}
+.album-int-vid{
+    background-image: url("imagen/Album-interior2.jpg");
+    border-radius: 2px 2px 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+iframe{
+    border: none;
+    width: 90%;
+    height: 190px;
+    border-radius: 10px;
+}
+@media screen and (min-width: 850px){
+    .logo-album{
+        width: 95px;
+        height: 95px;
+    }
+    .header-album{
+        height: 200px;
+    }
+    .album-int{
+        flex-direction: row;
+    }
+    .album-int-info,.album-int-vid{
+        width: 400px;
+        height: 400px;
+    }
+    .album-int-info{
+        background-image: url("imagen/Album-interior1desk.jpg");
+        border-radius: 5px 2px 2px 5px;
+    }
+    .album-int-vid{
+        background-image: url("imagen/Album-interior2desk.jpg");
+        border-radius: 2px 5px 5px 2px;
+    }
+    iframe{
+        width: 80%;
+    }
+}
+@media screen and (min-width: 1250px){
+    html,body{
+        min-height: 840px;
+    }
+    .logo-album{
+        width: 95px;
+        height: 95px;
+    }
+    .header-album{
+        height: 150px;
+    }
+    .album-int-info,.album-int-vid{
+        width: 650px;
+        height: 650px;
+    }
+    iframe{
+        height: 400px;
+    }
+}

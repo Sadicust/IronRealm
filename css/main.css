@@ -1,15 +1,16 @@
 *{
-    margin: 0px;
+    margin: 0;
     -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
     font-family: 'Corbel';
     user-select: none;
     outline: none;
 }
 body{
     background-color: rgb(240, 238, 239);
-    box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
 }
-header{
+.header-home{
     background-color: #37363b7e;
     box-shadow: 0px 50px 30px rgb(255, 255, 255);
     color: white;
@@ -25,15 +26,13 @@ header{
     display: flex;
     justify-content: space-between;
 }
-.logo{
+.logo-home{
     background-image: url("imagen/imagotipo.svg");
     background-repeat: no-repeat;
     filter: invert(1);
     width: 120px;
     height: 50px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
+    margin: 20px;
 }
 .social{
     background-color: #55535a50;
@@ -48,7 +47,7 @@ header{
     align-items: center;
     position: fixed;
     right: 60px;
-    z-index: 2;
+    z-index: 3;
 }
 .hl{
     width: 1px;
@@ -68,15 +67,15 @@ header{
     align-items: center;
     position: fixed;
     right: 10px;
-    z-index: 2;
+    z-index: 3;
 }
 .btn-aud{
     top: 10px;
 }
-.btn-dark{
+.btn-dark-home{
     top: 60px;
 }
-.btn-aud:hover,.btn-dark:hover{
+.btn-aud:hover,.btn-dark-home:hover,.btn-dark-album:hover{
     cursor: pointer;
 }
 .ico{
@@ -115,7 +114,7 @@ header{
     z-index: -1;
     overflow: hidden;
 }
-aside{
+.aside-race{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,10 +126,10 @@ aside{
     color: #666666;
     font-weight: bold;
 }
-aside >h1{
+.aside-race >h1{
     font-size: 30px;
 }
-aside > p{
+.aside-race > p{
     font-size: 17px;
     margin-bottom: 25px;
 }
@@ -199,7 +198,7 @@ aside > p{
     margin-bottom: 30px;
     color: #666666;
 }
-main{
+.main-home{
     width: 100%;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -345,7 +344,7 @@ main{
 @keyframes cambio-color-l{
     100% {color: #42e6a2}
 }
-.ver-noche,.ver-kraken,.ver-coloso,.ver-dorado{
+.comprar-noche,.comprar-kraken,.comprar-coloso,.comprar-dorado{
     background-color: #2c9b6d;
     opacity: 0;
     position: absolute;
@@ -359,24 +358,24 @@ main{
     transition: transform .5s, opacity .5s;
 
 }
-.ver-activo{
+.comprar-activo{
     right: 15px;
     opacity: 1;
     transition: transform .5s, opacity .5s;
 }
-.ver-noche:hover,.ver-kraken:hover,.ver-coloso:hover,.ver-dorado:hover{
+.comprar-noche:hover,.comprar-kraken:hover,.comprar-coloso:hover,.comprar-dorado:hover{
     background-color: #42e6a2; filter: drop-shadow(0 0 10px #42e6a2);
 }
-.ver{
+.comprar{
     width: 100%;
     height: 100%;
-    background-image: url("imagen/ver.svg");
+    background-image: url("imagen/comprar.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 70%;
+    background-size: 50%;
     filter: invert(1);
 }
-.efecto-btn-ver{
+.efecto-btn-comprar{
     background-color: transparent;
     width: 30px;
     height: 30px;
@@ -386,13 +385,117 @@ main{
     opacity: 0;
     animation: pulse 2s infinite linear;
 }
-#btn-compra:hover .efecto-btn-ver{
+#btn-comprar:hover .efecto-btn-comprar{
     box-shadow: 0px 0px 10px #42e6a2;
 }
 @keyframes pulse {
     0% {opacity: 0; transform: scale(0);}
     80% {opacity: 1; transform: scale(1);}
     100% {opacity: 0; transform: scale(1.5);}
+}
+.coming{
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #666666;
+    width: 100%;
+    height: 285px;
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.coming>h1{
+    font-size: 35px;
+}
+.vinyl-ink,.vinyl-ink-light{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: -200px;
+}
+.vinyl-ink{
+    animation: girar 2s infinite linear;
+}
+@keyframes girar {
+    0% {transform: rotate(0deg)} 
+    100% {transform: rotate(360deg)} 
+}
+.videos{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.cnt-videos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cnt-videos-video{
+    margin: 15px;
+}
+.cnt-videos-video iframe{
+    width: 300px;
+    height: 168.75px;
+    border: none;
+}
+.email{
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #666666;
+    width: 100%;
+    padding: 45px 0 45px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inp-email{
+    user-select: text;
+    text-align: center;
+	font-size: 17px;
+	background-color: transparent;
+    color: #6b6b6b;
+	width: 200px;
+    border: none;
+    border-bottom: 1px solid #808080;
+    padding: 3px 10px;
+	-webkit-transition: width .5s;
+	-moz-transition: width .5s;
+	transition: width .5s;
+}
+.inp-email:focus{
+	width: 250px;
+	color: black;
+	border-bottom: 1px solid #1b1b1b;
+}
+.inp-cnt{
+    width: 250px;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-email{
+	color: white;
+	background-color: #2c9b6d;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	width: 50%;
+	height: 30px;
+	cursor: pointer;
+}
+.btn-email:hover{
+	background-color: #42e6a2;
+	border: none;
+}
+.btn-email:active{
+    background-color: #3fdd9b;
 }
 footer div{
     background-color: rgb(240, 238, 239);
@@ -405,7 +508,7 @@ footer>div>p{
     line-height: 45px;
 }
 @media screen and (min-width: 600px){
-    header{
+    .header-home{
         width: 100%;
         height: 550px;
     }
@@ -415,9 +518,9 @@ footer>div>p{
     .header-vid{
         height: 550px;
     }
-    .logo{
+    .logo-home{
         width: 200px;
-        height: 100px;
+        height: 85px;
     }
     .social{
         width: 150px;
@@ -435,11 +538,11 @@ footer>div>p{
     .about >p{
         font-size: 19px;
     }
-    aside{
+    .aside-race{
         color: transparent;
         padding-top: 30px;
     }
-    aside >h1{
+    .aside-race >h1{
         background: #666666;
         text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
         font-size: 44px;
@@ -447,7 +550,7 @@ footer>div>p{
         -moz-background-clip: text;
         background-clip: text;
     }
-    aside > p{
+    .aside-race > p{
         background: #666666;
         text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
         font-size: 24px;
@@ -511,9 +614,9 @@ footer>div>p{
         0% {transform: rotate(-4deg);}
         100% {transform: translate(-7%,2%);} 
     }
-    main{
+    .main-home{
         margin-top: 150px;
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
     .ttl-main{
         font-size: 50px;
@@ -582,17 +685,34 @@ footer>div>p{
     .lista-noche>h1,.lista-kraken>h1,.lista-coloso>h1,.lista-dorado>h1{
         font-size: 20px;
     }
-    .ver-noche,.ver-kraken,.ver-coloso,.ver-dorado{
+    .comprar-noche,.comprar-kraken,.comprar-coloso,.comprar-dorado{
         right: -50px;
         width: 40px;
         height: 40px;
     }
-    .ver-activo{
+    .comprar-activo{
         transform: translate(-90px);
     }
-    .efecto-btn-ver{
+    .efecto-btn-comprar{
         width: 35px;
         height: 35px;
+    }
+    .coming{
+        height: 355px;
+        padding-top: 45px;
+    }
+    .coming>h1{
+        font-size: 40px;
+    }
+    .vinyl-ink,.vinyl-ink-light{
+        width: 550px;
+        height: 550px;
+        bottom: -275px;
+    }
+    .cnt-videos-video iframe{
+        width: 400px;
+        height: 225px;
+        border: none;
     }
     footer>p{
         font-size: 17px;
@@ -645,8 +765,17 @@ footer>div>p{
         font-size: 24px;
         margin-left: 15px;
     }
-    .ver-activo{
+    .comprar-activo{
         transform: translate(-110px);
+    }
+    .coming{
+        height: 480px;
+        padding-top: 45px;
+    }
+    .vinyl-ink,.vinyl-ink-light{
+        width: 775px;
+        height: 775px;
+        bottom: -385px;
     }
 }
 @media screen and (min-width: 1000px){
